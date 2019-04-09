@@ -1,4 +1,4 @@
-# Example project repository
+# Project Outline
 
 <!-- toc -->
 
@@ -18,14 +18,50 @@
 
 ## Project Charter 
 
-**Vision**: To enable animals everywhere to enjoy music just for them. 
+**Vision**
+Evaluate if a student can be admitted by the master program, and help them know how much they have to improve in a specific area in order to have a larger probability to be admitted.
 
-**Mission**: Enable users to add songs that they like and produce new song recommendations based on their entries.
+**Mission**
+ - By analyzing the admitted students’ common advantages, conclude the importance for each part of students' application.
+ - Estimate the probability of a student to be admitted by the master program based on the input information using classification model.
+ - Help student know how much they need to improve in a specific area (like how much score they need to improve in TOFEL) using established model and binary search.
 
-**Success criteria**: Users play 80% of recommended songs more than once. 
+**Success Criteria**
+ - Machine Learning Performance metric: The confusion matrix will be used to measure the performance of the model. The success criteria for the classification model is prediction accuracy over 80%, and the precision is expected over 0.8 and the recall over 0.7.
+ - Business outcome metric: Check if this app will increase the admission rate for perspective students.
+
+**Main Theme**
+	There might be different weights for different parts of the students' application. To have a view of how much these different scores weight for the admission result, student can allocate their time and efforts on each exam better. Also, students might have different background in their application process. It will be helpful for them to track if they could be admitted based on their current score. They might also need to see how much they have to improve one area if they still have time to take actions. 
+
+**Epic 1**: There are various types of student with different backgrounds. For example, some of them spend more time on researches, some of them focus more on the coursework. This app will display the ordinary criteria for each object in application for the reference of prospective students.
+ - Backlog 1: Go through the overall dataset and look at each attribute to see if the data is biased in a specific aspect. 
+	 - Time estimated: 1
+	 - Planned for next two weeks
+ - Backlog 2: Compare students who were admitted by the master program and those were not. Conclude the common properties for those admitted student using clustering. 
+	 - Time estimated: 2; 
+	 - Planned for next two weeks
+ - Backlog 3: Visualize those different types of admitted student to help users have a better view. 
+	 - Time estimated: 1; 
+	 - Planned for next two weeks
+
+**Epic 2**: Students want to know if they will be admitted based on their current status in some certain confidence level. \
+
+ - Backlog 1: Update the predicted value based on the imputed confidence interval, and set up the interactive function. 
+	 - Time estimated: 2
+ - Backlog 2: Model this classification problem using all features. As the new student’s information entered, the app will give an estimation of whether this student could be admitted based on current status. 
+	 - Time estimated: 4
+ - Icebox 1: Add some exogenous factors that may have an influence on student’s admission probability, but student cannot control/change. For example, some schools prefer to admit students whose parent is an alumna/alumnus; some schoomay have certain proportion of students from a specific country etc. This requires a larger data set about students’ bio-info and involves more heterogeneities.
 
 
-_Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
+**Epic 3**: Students who get an estimated result of not being admitted might want to improve a specific area to increase the probability to be admitted. For example, a student might have another chance to take a TOFEL or GRE, and he or she would want to know how much score they need to get in these two exams, and choose the one that is relatively easier to achieve. This app will give a minimum improved score in a specific area for a student to be estimated as “admitted”.
+
+ - Backlog 1: Make an interactive function that users can select the part they would like to improve. 
+	 - Time estimated: 2
+ - Backlog 2: Use the previous model and binary search (or other optimization method) to estimate the minimum score that they need to improve in this part in order to be admitted by the master program. 
+	 - Time estimated: 4
+ - Backlog 3: Add the function that allows students to choose a cutoff line for being estimated as "admitted". 
+	 - Time estimated: 2
+
 
 ## Repo structure 
 
@@ -151,3 +187,6 @@ Run `pytest` from the command line in the main project repository.
 
 
 Tests exist in `test/test_helpers.py`
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU2ODU2Njk1NV19
+-->
