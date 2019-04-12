@@ -35,6 +35,7 @@ Evaluate if a student can be admitted by the master program, and help them know 
 ## Project Planning 
 
 **Main Theme**
+
 	There might be different weights for different parts of the students' application. To have a view of how much these different scores weight for the admission result, student can allocate their time and efforts on each exam better. Also, students might have different background in their application process. It will be helpful for them to track if they could be admitted based on their current score. They might also need to see how much they have to improve one area if they still have time to take actions. 
 
 **Epic 1**: There are various types of student with different backgrounds. For example, some of them spend more time on researches, some of them focus more on the coursework. This app will display the ordinary criteria for each object in application for the reference of prospective students.
@@ -204,5 +205,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkzNzkwODMxXX0=
+eyJoaXN0b3J5IjpbLTE5MjU3ODg3MDcsMzkzNzkwODMxXX0=
 -->
