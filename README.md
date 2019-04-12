@@ -20,6 +20,7 @@
 ## Project Charter 
 
 **Vision**
+
 Evaluate if a student can be admitted by the master program, and help them know how much they have to improve in a specific area in order to have a larger probability to be admitted.
 
 **Mission**
@@ -203,5 +204,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjc2OTE3NDddfQ==
+eyJoaXN0b3J5IjpbMzkzNzkwODMxXX0=
 -->
