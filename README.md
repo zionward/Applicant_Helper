@@ -48,8 +48,9 @@ There might be different weights for different parts of the students' applicatio
 
  - Story 1: Update the predicted value based on the imputed confidence interval, and set up the interactive function. 
  - Story 2: Model this classification problem using all features. As the new student’s information entered, the app will give an estimation of whether this student could be admitted based on current status. 
- - Story 3: Add some exogenous factors that may have an influence on student’s admission probability, but student cannot control/change. For example, some schools prefer to admit students whose parent is an alumna/alumnus; some schoomay have certain proportion of students from a specific country etc. This requires a larger data set about students’ bio-info and involves more heterogeneities.
- - Story 4: Some student might do not take some exam, and it might be not fair for count it as 0. It would be helpful to select the objects that students have for prediction.
+ - Story 3: Some student might do not take some exam, and it might be not fair for count it as 0. It would be helpful to select the objects that students have for prediction.
+ - Story 4: Add some exogenous factors that may have an influence on student’s admission probability, but student cannot control/change. For example, some schools prefer to admit students whose parent is an alumna/alumnus; some schoomay have certain proportion of students from a specific country etc. This requires a larger data set about students’ bio-info and involves more heterogeneities.
+
 
 
 **Epic 3**: Students who get an estimated result of not being admitted might want to improve a specific area to increase the probability to be admitted. For example, a student might have another chance to take a TOFEL or GRE, and he or she would want to know how much score they need to get in these two exams, and choose the one that is relatively easier to achieve. This app will give a minimum improved score in a specific area for a student to be estimated as “admitted”.
@@ -74,8 +75,8 @@ There might be different weights for different parts of the students' applicatio
 7. epic3.story2: Application of the binary search model to different objects (4 point)
 8. epic3.story3:  Adding customized cutoff (2 point)
 ### IceBox 
-1, epic2.story3: Exogenous Factors Exploration （8 points）
-2. epic3.story4: Objects Selection (4 points)
+1. epic2.story3: Objects Selection (4 points)
+2. epic2.story4: Exogenous Factors Exploration （8 points）
 3. epic4.story1: Transition from local to AWS (8 points)
 4. epic4.story1: App Development (8 point)
 
@@ -205,5 +206,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI3NjEzMTA3LC0xMzA0NjU3MDk5XX0=
+eyJoaXN0b3J5IjpbLTQwODgxNjkwNl19
 -->
