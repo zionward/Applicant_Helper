@@ -62,7 +62,7 @@ There might be different weights for different parts of the students' applicatio
 **Epic 4** This model would be deployed onto AWS in the form of web app.
 
  - Story 1: Transfer the project from local to AWS. 
- - Story2: Design the user interface to make it easy to achieve user interaction.
+ - Story 2: Design the user interface to make it easy to achieve user interaction.
 
 ### Backlog 
 
@@ -206,5 +206,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODgxNjkwNl19
+eyJoaXN0b3J5IjpbLTU0NDA5MDkxNl19
 -->
