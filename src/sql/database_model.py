@@ -25,14 +25,15 @@ Base = declarative_base()
 
 class Student_Prediction(Base):
     """Create a data model for the database to be set up for capturing songs """
-    __tablename__ = 'user_prediction'
-    GRE = Column(String(10), primary_key=True, unique=True, nullable=False)
+    __tablename__ = 'students_prediction'
+    Serial = Column(Integer, primary_key=True, unique=True, nullable=False)
+    GRE = Column(String(10), nullable=False)
     TOEFL = Column(String(10),nullable=False)
     university_rating = Column(String(10), nullable=False)
     SOP = Column(String(10), nullable=True)
     LOR = Column(String(10),nullable=False)
     CGPA = Column(String(10), nullable = False)
-    Research = Column(String(10),nullable = False)
+    research = Column(String(10),nullable = False)
 
 
 
@@ -95,12 +96,14 @@ if __name__ == "__main__":
 
     student1 = Student_Prediction(GRE = "337",TOEFL = "118",university_rating = "4",SOP = "4.5", LOR = "4.5", CGPA = "9.65", research = "1")
     session.add(student1)
+    #session.execute("DELETE FROM student_prediction")
     session.commit()
 
     logger.info("Data added")
 
-    query = "SELECT * FROM Student_Prediction"
+    query = "SELECT * FROM students_prediction"
     df = pd.read_sql(query, con=engine)
     logger.info(df)
     session.close()
+
 
