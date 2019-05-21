@@ -4,6 +4,8 @@ import boto3
 s3 = boto3.client("s3")
 
 def download_data(args):
+    """Download data from developers' S3 to local
+    """
     s3.download_file(args.bucket_name, args.file_key, args.output_file_path)
 
 
