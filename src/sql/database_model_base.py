@@ -1,7 +1,7 @@
 """
 Created on 5/14/19
 
-@author: Ziying Wang
+@author: Ziying  Wang
 
 """
 import os
