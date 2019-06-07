@@ -1,43 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="static/basic.css" rel="stylesheet">
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Graduate Admission</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/vendor.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/pred_style.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="static/js/modernizr.js"></script>
+    <script src="static/js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="static/image/x-icon">
+    <link rel="icon" href="favicon.ico" type="static/image/x-icon">
+
 </head>
 
-<body>
-    <h3>
-         <a href = "{{ url_for('index') }}">Penny Lane Music Recommender</a>
-    </h3>
+<body id="top">
 
-    <hr/>
-    <table>
-         <thead>
-            <tr>
-               <th>Title</th>
-               <th>Artist</th>
-               <th>Album</th>
-            </tr>
-         </thead>
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
 
-         <tbody>
-            {% for track in tracks %}
-               <tr>
-                   <td>{{ track.title }}</td>
-                   <td>{{ track.artist }}</td>
-                   <td>{{ track.album }}</td>
-               </tr>
-            {% endfor %}
-         </tbody>
-      </table>
-      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
-      <dl>
-        <input type=text size=15 name=title placeholder="Title">
-        <input type=text size=15 name=artist placeholder="Artist">
-        <input type=text size=15 name=album placeholder="Album">
-        <input type=submit value=Add>
-      </dl>
-    </form>
+        <!-- <div class="header-logo">
+            <a class="site-logo" href="index.html"> --> 
+                <!-- <img src="static/images/logo.svg" alt="Homepage"> -->
+            <!-- </a>
+        </div>  -->
+        <!-- end header-logo -->
+<!-- 
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+            
+
+        </nav>  -->
+        <!-- end header-nav -->
+
+        <!-- <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a> -->
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="static/images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+
+        <div class="shadow-overlay"></div>
+        <div class="home-content">
+
+            <div class="row home-content__main">
+                <h1>
+                Hello folks, this is a applicant helper<br>
+                </h1>
+
+                <p>
+                We evaluate yourself in graduate applicatoin <br>
+                and help you set a goal for your subject exam!
+                </p>
+            </div> <!-- end home-content__main -->
+        </div> <!-- end home-content -->
+
+        <ul class="home-sidelinks">
+                <!-- <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+                <form action="/add" method="POST">  -->
+                    <!-- <dl> -->
+            <!-- <li><a class="smoothscroll" href="#about">About<span>who we are</span></a></li> -->
+            <li><a class="smoothscroll" href="#services">Services</a></li>
+            <!-- <li><a  class="smoothscroll" href="#contact">Contact<span>get in touch</span></a></li> -->
+                    <!-- <input type=submit value="Services"> -->
+                    <!-- </dl>-->
+            <!-- </form>
+            </form>  -->
+        </ul> <!-- end home-sidelinks -->
+        
+
+        <a href="#about" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll Down</span>
+            <span class="home-scroll__icon"></span>
+        </a> 
+        <!-- end home-scroll -->
+
+    </section> <!-- end s-home -->
+        
+    <!-- services
+    ================================================== -->
+
+    <section id='services' class="s-services light-gray">
+
+            <div class="row section-header" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Evaluate Yourself</h3>
+                    <h1 class="display-1">Predict Your Application Result</h1>
+                </div>
+            </div> <!-- end section-header -->
+    
+            <div class="row" data-aos="fade-up">
+                <div class="col-full">
+                    <p class="lead">
+                    Please Set your confidence level of prediction and your background info 
+                    </p>
+                </div>
+            </div> <!-- end about-desc -->
+    
+            <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
+    
+                <div class="col-block service-item " data-aos="fade-up">
+                    <div class="service-icon service-icon--brand-identity">
+                        <i class="icon-pencil-ruler"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">GRE</h3>
+                        <input type=number name="GRE" id="GRE" min=0 max=340 required/>
+                        <!-- <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        </p> -->
+                    </div>
+                </div>
+    
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon  service-icon--illustration">
+                        <i class="icon-pencil"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">TOEFL</h3>
+                        <input type=number name="TOEFL" id="TOEFL" min=0 max=120 required/>
+                        <!-- <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        </p> -->
+                    </div>
+                </div>
+    
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon  service-icon--web-design">
+                        <i class="icon-building"></i>
+                    </div>  
+                    <div class="service-text">
+                        <h3 class="h4">University Rating</h3>
+                        <!-- <label for="University Rating">Family History :</label> -->
+                                <div class="form-select">
+                                    <select name="University_Rating" id="University_Rating" style="background-color: #D8D8D8">
+                                        <!-- <option value=""></option> -->
+                                        <option value="5">1st Tier</option>
+                                        <option value="4">2nd Tier</option>
+                                        <option value="3">3rd Tier</option>
+                                        <option value="2">4th Tier</option>
+                                        <option value="1">5th Tier</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        <!-- <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        </p> -->
+                    </div>
+                </div>
+    
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon service-icon--product-strategy">
+                        <i class="icon-notes"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Statement of Purpose (1-5)</h3>
+                        <input type=number name="SOP" id="SOP" min=0 max=10 required/>
+                    </div>
+                </div>
+    
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon  service-icon--ui-design">
+                        <i class="icon-glasses"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Letter of Recommendation (1-5)</h3>
+                        <input type=number name="LOR" id="LOR" min=0 max=10 required/>
+                    </div>
+                </div>
+        
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon service-icon--mobile-dev">
+                        <i class="icon-book"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Cumulative GPA (1-10)</h3>
+                        <input type=number name="CGPA" id="CGPA" min=0 max=10 required/>
+                    </div>
+                </div>
+
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon service-icon--mobile-dev">
+                        <i class="icon-book"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h4">Research Experience</h3>
+                        <div class="form-select">
+                            <select name="research" id="research" style="background-color: #D8D8D8">
+                                <!-- <option value=""></option> -->
+                                <option value="0">Do not have research </option>
+                                <option value="1">Have research experience</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+    
+            </div> <!-- end services-list -->
+    
+        </section> <!-- end s-services -->
+    
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">            
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/main.js"></script>
 
 </body>
+
 </html>

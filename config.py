@@ -1,7 +1,9 @@
 DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
-PORT = 3000
-APP_NAME = "penny-lane"
+PORT = 3002
+APP_NAME = "Graduate-Admission"
 SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "127.0.0.1"
+MODEL_PATH = "models/trained_model.pkl"
+DATA_PATH = "data/sample/admission_to_train.csv"
