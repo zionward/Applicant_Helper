@@ -18,7 +18,11 @@ import logging.config
 logging.config.fileConfig("config/logging/local.conf")
 logger = logging.getLogger("run-penny-lane")
 
-from src.add_songs import create_db, add_track
+from src.generate_features import run_generate_features
+from src.train_model import run_train_model
+from src.score_model import run_score_model
+from src.post_model import run_post_model
+
 
 
 if __name__ == '__main__':
@@ -26,19 +30,40 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run components of the model source code")
     subparsers = parser.add_subparsers()
 
-    # Sub-parser for creating a database
-    sb_create = subparsers.add_parser("create", description="Create database")
-    sb_create.add_argument("--artist", default="Britney Spears", help="Artist of song to be added")
-    sb_create.add_argument("--title", default="Radar", help="Title of song to be added")
-    sb_create.add_argument("--album", default="Circus", help="Album of song being added.")
-    sb_create.set_defaults(func=create_db)
+    # Generate Features
+    sb_features = subparsers.add_parser("generate_features", description = "Generate features")
+    sb_features.add_argument('--config', help = "Path to yaml file with config information")
+    sb_features.add_argument('--input', help = "Path to input dataframe")
+    sb_features.add_argument("--bucket_name", help = "s3 bucket name")
+    sb_features.add_argument("--file_key", help = "Name of the file in S3 that you want to download")
+    sb_features.add_argument("--output_file_path", help = "output path for downloaded file")
+    sb_features.add_argument("--output", help = "output path for output file") 
+    sb_features.set_defaults(func=run_generate_features)
 
-    # Sub-parser for ingesting new data
-    sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
-    sb_ingest.add_argument("--artist", default="Emancipator", help="Artist of song to be added")
-    sb_ingest.add_argument("--title", default="Minor Cause", help="Title of song to be added")
-    sb_ingest.add_argument("--album", default="Dusk to Dawn", help="Album of song being added")
-    sb_ingest.set_defaults(func=add_track)
+    # Sub-parser for building model for database student 
+    sb_model = subparsers.add_parser("train_model", description="train model")
+    sb_model.add_argument('--config', default="config.yaml",
+                        help='path to yaml file with configurations')
+    sb_model.add_argument('--input', default=None, help="Path to input dataframe")
+    sb_model.add_argument('--output', default=None, help='Path to output dataframe')
+    sb_model.set_defaults(func=run_train_model)
+
+    #sub-parser for predicting new studenn
+    sb_score = subparsers.add_parser("score_model", description="predict new student application result")
+    sb_score.add_argument('--config', '-c', help='path to yaml file with configurations')
+    sb_score.add_argument('--input', '-i', default=None, help="Path to input dataframe")
+    sb_score.add_argument('--output', '-o', default=None, help='Path to output file')
+    sb_score.set_defaults(func=run_score_model)
+
+    #sub-parser for predicting optimal score
+    sb_post = subparsers.add_parser("post_model", description="predict minimum score of selected subjesct to help a student be admitted")
+    sb_post.add_argument('--config', '-c', help='path to yaml file with configurations')
+    sb_post.add_argument('--input', '-i', default=None, help="Path to CSV for input to model evaluation")
+    sb_post.add_argument('--option','-op', default='GRE', help = "Choose a subject to predict.")
+    sb_postparser.add_argument('--data', '-d', help = 'path to raw student dataset.')
+    sb_post.add_argument('--output', '-o', default=None, help='Path to save the output file.')
+    sb_post.set_defaults(func=run_post_model)
+
 
     args = parser.parse_args()
     args.func(args)

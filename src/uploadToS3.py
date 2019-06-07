@@ -9,8 +9,6 @@ import boto3
 s3 = boto3.client("s3")
 
 def upload_data(args):
-    """Upload local file to user's own S3
-    """
     s3.upload_file(args.input_file_path, args.bucket_name, args.output_file_path)
 
 
