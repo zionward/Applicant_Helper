@@ -116,9 +116,10 @@ There might be different weights for different parts of the students' applicatio
 │   ├── eval_model.py             <- Script for evaluating model performance 
 │   ├── socre_model.py                <- Script for predict one new student prediction result
 │   ├── post_model.py                <- Script for search optimal score of specified subject to help student be admitted
+│   ├── database_model.py                <- Script for creating database model that is later coon
 │
 ├── test                              <- Files necessary for running model tests (see documentation below) 
-│   ├── test.py                <- unit test for code in '
+│   ├── test.py                <- unit test for code in /src
 
 ├── run.py                            <- Simplifies the execution of one or more of the src scripts 
 ├── app.py                            <- Flask wrapper for running the model 
@@ -199,6 +200,6 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTI4Mzg0NCwyMjk3MDU4MiwtNTQ0MD
+eyJoaXN0b3J5IjpbLTYyMDg1ODYzNiwyMjk3MDU4MiwtNTQ0MD
 kwOTE2XX0=
 -->
