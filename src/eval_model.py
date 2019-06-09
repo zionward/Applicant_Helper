@@ -19,11 +19,12 @@ from sklearn.metrics import accuracy_score, recall_score, roc_auc_score, confusi
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
+from sklearn.linear_model import LogisticRegression
+
 import matplotlib.pyplot as plt
 # from load_data import load_data
-from generate_features import get_features, get_target
-from train_model import train_test_split
-from sklearn.linear_model import LogisticRegression
+from src.generate_features import get_features, get_target
+from src.train_model import train_test_split
 
 logger = logging.getLogger(__name__)
 
@@ -31,13 +32,13 @@ def evaluate_model(df_score,X_test,model_path, save_eval = None, **kwargs):
     """Calculate the auc and accuracy for predictive model
     Args:
         df_score (:py:class:`pandas.DataFrame`): a pandas Dataframe containing the predictive score.
+        X_test (:py:class:`pandas.DataFrame`): a pandas Dataframe containing the features of testing dataset.
         save_path (str): Optional. Path to save the output.
 
     Returns:
         metric (:py:class:`pandas.DataFrame`): a pandas dataframe containing AUC and Accuracy on test.
     """
     logger.debug("Evaluating models")
-
 
     #load model
     with open(model_path, "rb") as f:
@@ -81,7 +82,6 @@ def evaluate_model(df_score,X_test,model_path, save_eval = None, **kwargs):
     plt.legend(loc="lower right")
     plt.savefig('models/Log_ROC')
 
-
     auc = sklearn.metrics.roc_auc_score(y_test, y_pred)
     accuracy = sklearn.metrics.accuracy_score(y_test, y_pred)
     metric = pd.DataFrame({'auc':[auc],'accuracy': [accuracy]})
@@ -98,6 +98,7 @@ def run_evaluate_model(args):
         args: From argparse, should contain args.config and optionally, args.save
             args.config (str): Path to yaml file with evaluate_model
             args.input (str): Optional. Path to input socre file
+            args.Xtest (str): Optional. Path to testing dataset feature file
             args.output (str): Optional. Path to save the output result.
     Returns: None
     """
@@ -112,7 +113,6 @@ def run_evaluate_model(args):
 
     if args.Xtest is not None:
         X_test = pd.read_csv(args.Xtest,index_col=0)
-        print("X_test is as: ", X_test.head())
         logger.info("Features for input into model loaded from %s", args.Xtest)
     else:
         raise ValueError("No input features")

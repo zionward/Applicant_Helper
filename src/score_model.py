@@ -10,8 +10,8 @@ import pandas as pd
 import numpy as np
 
 #from load_data import load_data
-from generate_features import get_features, get_target
-from train_model import train_test_split, get_mean, get_sd,normalize_features
+from src.generate_features import get_features, get_target
+from src.train_model import train_test_split, get_mean, get_sd,normalize_features
 from sklearn.linear_model import LogisticRegression
 
 logger = logging.getLogger(__name__)

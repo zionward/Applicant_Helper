@@ -10,8 +10,8 @@ import pandas as pd
 import numpy as np
 
 # from load_data import load_data
-from generate_features import get_features, get_target
-from train_model import train_test_split
+from src.generate_features import get_features, get_target
+from src.train_model import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 logger = logging.getLogger(__name__)
@@ -20,18 +20,16 @@ score_model_kwargs = ["predict"]
 def test_model(X_test, model_path, save_score, **kwargs):
     """ Calculate the socre for the predictive model.
     Args:
-        df: (:py:class:`pandas.DataFrame`): a pandas dataframe 
+        X_test: (:py:class:`pandas.DataFrame`): a pandas dataframe containing testing dataset
         model_path (str): the path to the logistic regression model
         save_score (str): Optional. The path to save the score
     Returns:
-        y_predicted (:py:class:`pandas.DataFrame`): a pandas dataframe, containing one predicted class and its corresponding probablity.
+        y_pred_df (:py:class:`pandas.DataFrame`): a pandas dataframe, containing predicted class of testing data.
     """
 
     #get predictors
     with open(model_path, "rb") as f:
         logreg = pickle.load(f)
-
-    # X_test = pd.read_csv(kwargs["path_to_test_features"])
     
     #predict
     y_pred = logreg.predict(X_test)
@@ -61,7 +59,6 @@ def run_test_model(args):
     else:
         raise ValueError("No input data.")
 
-    # print("X_test is as following : " , X_test.head())
     y_predicted = test_model(X_test, **config["test_model"]) 
 
     if args.output is not None: 

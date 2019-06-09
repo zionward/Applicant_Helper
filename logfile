@@ -86,3 +86,421 @@
 2019-06-08 22:50:15,237 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
 2019-06-08 22:50:15,237 DEBUG    Registering retry handlers for service: s3
 2019-06-08 22:50:15,238 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:13:24,395 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:13:24,399 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:13:24,400 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:13:24,402 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:13:24,402 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:13:24,402 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:13:24,403 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:13:24,405 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:13:24,405 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:13:24,405 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:13:24,405 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:13:24,407 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:13:24,412 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x108303d90>
+2019-06-09 01:13:24,445 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:13:24,454 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1082c3598>
+2019-06-09 01:13:24,454 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x108385ea0>
+2019-06-09 01:13:24,471 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1082c3378>
+2019-06-09 01:13:24,472 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:13:24,479 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:13:24,480 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:13:24,480 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:13:24,481 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:13:30,568 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:13:30,571 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:13:30,571 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:13:30,573 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:13:30,574 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:13:30,574 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:13:30,575 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:13:30,577 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:13:30,577 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:13:30,577 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:13:30,577 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:13:30,578 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:13:30,583 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x1124ebd90>
+2019-06-09 01:13:30,593 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:13:30,601 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1124ab598>
+2019-06-09 01:13:30,601 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x11256eea0>
+2019-06-09 01:13:30,610 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1124ab378>
+2019-06-09 01:13:30,611 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:13:30,617 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:13:30,618 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:13:30,619 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:13:30,619 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:14:03,711 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:14:03,715 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:14:03,716 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:14:03,718 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:14:03,718 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:14:03,718 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:14:03,719 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:14:03,722 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:14:03,722 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:14:03,722 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:14:03,722 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:14:03,724 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:14:03,729 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x107302d90>
+2019-06-09 01:14:03,739 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:14:03,748 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1072c2598>
+2019-06-09 01:14:03,748 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x107383ea0>
+2019-06-09 01:14:03,758 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1072c2378>
+2019-06-09 01:14:03,758 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:14:03,765 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:14:03,766 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:14:03,767 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:14:03,768 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:14:29,622 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:14:29,625 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:14:29,626 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:14:29,628 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:14:29,628 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:14:29,628 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:14:29,629 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:14:29,632 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:14:29,632 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:14:29,632 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:14:29,632 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:14:29,633 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:14:29,638 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x1096d2d08>
+2019-06-09 01:14:29,648 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:14:29,657 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x109692510>
+2019-06-09 01:14:29,657 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x109753e18>
+2019-06-09 01:14:29,667 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1096922f0>
+2019-06-09 01:14:29,668 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:14:29,675 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:14:29,676 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:14:29,676 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:14:29,677 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:52:38,739 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:52:38,743 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:52:38,744 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:52:38,746 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:52:38,746 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:52:38,747 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:52:38,748 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:52:38,750 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:52:38,750 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:52:38,750 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:52:38,750 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:52:38,752 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:52:38,757 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10aea5d08>
+2019-06-09 01:52:38,787 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:52:38,795 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10ae65510>
+2019-06-09 01:52:38,795 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10af27e18>
+2019-06-09 01:52:38,805 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10ae652f0>
+2019-06-09 01:52:38,806 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:52:38,812 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:52:38,813 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:52:38,814 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:52:38,814 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 01:52:41,634 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 01:52:41,637 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 01:52:41,638 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 01:52:41,640 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 01:52:41,640 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 01:52:41,640 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 01:52:41,641 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 01:52:41,643 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 01:52:41,643 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 01:52:41,643 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 01:52:41,643 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 01:52:41,645 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 01:52:41,649 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x106835d08>
+2019-06-09 01:52:41,659 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 01:52:41,667 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1067f5510>
+2019-06-09 01:52:41,667 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x1068b8e18>
+2019-06-09 01:52:41,676 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1067f52f0>
+2019-06-09 01:52:41,676 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 01:52:41,683 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 01:52:41,684 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 01:52:41,684 DEBUG    Registering retry handlers for service: s3
+2019-06-09 01:52:41,685 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:27:34,150 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:27:34,153 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:27:34,154 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:27:34,156 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:27:34,157 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:27:34,157 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:27:34,158 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:27:34,160 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:27:34,160 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:27:34,160 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:27:34,160 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:27:34,162 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:27:34,167 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10c7eed08>
+2019-06-09 02:27:34,196 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:27:34,204 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10c7ae510>
+2019-06-09 02:27:34,204 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10c871e18>
+2019-06-09 02:27:34,221 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10c7ae2f0>
+2019-06-09 02:27:34,221 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:27:34,228 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:27:34,229 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:27:34,229 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:27:34,230 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:29:52,548 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:29:52,553 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:29:52,554 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:29:52,557 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:29:52,557 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:29:52,557 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:29:52,558 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:29:52,562 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:29:52,562 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:29:52,562 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:29:52,562 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:29:52,564 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:29:52,570 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10b99ad08>
+2019-06-09 02:29:52,585 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:29:52,594 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10b95a510>
+2019-06-09 02:29:52,594 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10ba1ce18>
+2019-06-09 02:29:52,614 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10b95a2f0>
+2019-06-09 02:29:52,614 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:29:52,622 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:29:52,623 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:29:52,623 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:29:52,624 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:30:31,583 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:30:31,587 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:30:31,587 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:30:31,590 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:30:31,590 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:30:31,590 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:30:31,591 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:30:31,593 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:30:31,594 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:30:31,594 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:30:31,594 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:30:31,596 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:30:31,600 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10d43dd08>
+2019-06-09 02:30:31,611 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:30:31,620 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10d3fd510>
+2019-06-09 02:30:31,620 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10d4bee18>
+2019-06-09 02:30:31,635 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10d3fd2f0>
+2019-06-09 02:30:31,636 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:30:31,643 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:30:31,644 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:30:31,645 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:30:31,645 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:31:08,154 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:31:08,158 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:31:08,158 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:31:08,160 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:31:08,160 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:31:08,161 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:31:08,161 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:31:08,164 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:31:08,164 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:31:08,164 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:31:08,164 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:31:08,165 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:31:08,170 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10c051d08>
+2019-06-09 02:31:08,180 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:31:08,189 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10c011510>
+2019-06-09 02:31:08,189 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10c0d3e18>
+2019-06-09 02:31:08,199 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10c0112f0>
+2019-06-09 02:31:08,199 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:31:08,206 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:31:08,207 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:31:08,208 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:31:08,209 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:31:12,221 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:31:12,224 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:31:12,225 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:31:12,227 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:31:12,227 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:31:12,228 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:31:12,228 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:31:12,230 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:31:12,231 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:31:12,231 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:31:12,231 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:31:12,232 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:31:12,237 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x1070acd08>
+2019-06-09 02:31:12,246 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:31:12,254 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10706c510>
+2019-06-09 02:31:12,254 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10712fe18>
+2019-06-09 02:31:12,264 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10706c2f0>
+2019-06-09 02:31:12,264 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:31:12,271 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:31:12,272 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:31:12,272 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:31:12,273 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:33:53,075 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:33:53,078 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:33:53,079 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:33:53,080 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:33:53,081 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:33:53,081 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:33:53,082 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:33:53,084 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:33:53,084 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:33:53,084 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:33:53,084 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:33:53,086 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:33:53,091 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10a803d08>
+2019-06-09 02:33:53,101 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:33:53,111 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10a7c3510>
+2019-06-09 02:33:53,111 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10a884e18>
+2019-06-09 02:33:53,126 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10a7c32f0>
+2019-06-09 02:33:53,126 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:33:53,132 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:33:53,133 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:33:53,134 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:33:53,135 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:34:16,899 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:34:16,902 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:34:16,903 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:34:16,904 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:34:16,904 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:34:16,905 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:34:16,905 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:34:16,908 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:34:16,908 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:34:16,908 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:34:16,908 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:34:16,909 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:34:16,914 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x1109f5d08>
+2019-06-09 02:34:16,923 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:34:16,932 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1109b5510>
+2019-06-09 02:34:16,932 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x110a78e18>
+2019-06-09 02:34:16,942 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1109b52f0>
+2019-06-09 02:34:16,942 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:34:16,949 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:34:16,949 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:34:16,950 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:34:16,951 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:34:29,120 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:34:29,124 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:34:29,124 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:34:29,126 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:34:29,126 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:34:29,127 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:34:29,127 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:34:29,130 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:34:29,130 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:34:29,130 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:34:29,130 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:34:29,131 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:34:29,136 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10fa06d08>
+2019-06-09 02:34:29,145 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:34:29,153 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10f9c6510>
+2019-06-09 02:34:29,153 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10fa89e18>
+2019-06-09 02:34:29,163 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10f9c62f0>
+2019-06-09 02:34:29,163 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:34:29,169 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:34:29,170 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:34:29,171 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:34:29,171 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:35:07,464 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:35:07,468 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:35:07,468 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:35:07,470 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:35:07,470 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:35:07,470 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:35:07,471 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:35:07,473 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:35:07,474 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:35:07,474 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:35:07,474 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:35:07,475 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:35:07,479 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10fc4fd08>
+2019-06-09 02:35:07,489 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:35:07,497 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10fc0f510>
+2019-06-09 02:35:07,497 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10fcd3e18>
+2019-06-09 02:35:07,506 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10fc0f2f0>
+2019-06-09 02:35:07,507 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:35:07,513 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:35:07,514 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:35:07,515 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:35:07,515 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:36:22,299 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:36:22,302 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:36:22,303 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:36:22,305 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:36:22,305 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:36:22,305 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:36:22,306 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:36:22,308 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:36:22,308 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:36:22,308 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:36:22,308 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:36:22,310 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:36:22,314 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x111073d08>
+2019-06-09 02:36:22,326 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:36:22,335 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x111033510>
+2019-06-09 02:36:22,335 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x1110f8e18>
+2019-06-09 02:36:22,346 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1110332f0>
+2019-06-09 02:36:22,346 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:36:22,353 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:36:22,354 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:36:22,355 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:36:22,356 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:36:29,373 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:36:29,376 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:36:29,377 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:36:29,379 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:36:29,379 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:36:29,379 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:36:29,380 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:36:29,382 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:36:29,383 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:36:29,383 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:36:29,383 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:36:29,384 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:36:29,388 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10f4a9d08>
+2019-06-09 02:36:29,398 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:36:29,406 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10f469510>
+2019-06-09 02:36:29,407 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10f52de18>
+2019-06-09 02:36:29,416 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10f4692f0>
+2019-06-09 02:36:29,416 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:36:29,423 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:36:29,424 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:36:29,424 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:36:29,425 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:36:32,212 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:36:32,215 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:36:32,215 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:36:32,217 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:36:32,218 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:36:32,218 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:36:32,219 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:36:32,221 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:36:32,221 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:36:32,221 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:36:32,221 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:36:32,223 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:36:32,227 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x10fb94d08>
+2019-06-09 02:36:32,236 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:36:32,245 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10fb54510>
+2019-06-09 02:36:32,245 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10fc18e18>
+2019-06-09 02:36:32,254 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10fb542f0>
+2019-06-09 02:36:32,255 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:36:32,261 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:36:32,262 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:36:32,262 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:36:32,263 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-09 02:36:35,220 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-09 02:36:35,223 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-09 02:36:35,224 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-09 02:36:35,226 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-09 02:36:35,226 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-09 02:36:35,226 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-09 02:36:35,227 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-09 02:36:35,229 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-09 02:36:35,229 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-09 02:36:35,229 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-09 02:36:35,229 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-09 02:36:35,231 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/endpoints.json
+2019-06-09 02:36:35,235 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x1119e5d08>
+2019-06-09 02:36:35,245 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-09 02:36:35,254 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1119a5510>
+2019-06-09 02:36:35,254 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x111a6ae18>
+2019-06-09 02:36:35,264 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1119a52f0>
+2019-06-09 02:36:35,264 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-09 02:36:35,271 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-09 02:36:35,272 DEBUG    Loading JSON file: /Users/ziyingwang/anaconda3/lib/python3.6/site-packages/botocore/data/_retry.json
+2019-06-09 02:36:35,273 DEBUG    Registering retry handlers for service: s3
+2019-06-09 02:36:35,273 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.

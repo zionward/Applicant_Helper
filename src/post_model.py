@@ -15,9 +15,9 @@ import math
 from sklearn.metrics import accuracy_score, recall_score, roc_auc_score, confusion_matrix, f1_score
 
 #from load_data import load_data
-from generate_features import get_features, get_target
-from train_model import train_test_split, get_mean, get_sd,normalize_features
-from score_model import get_new_student, normalize_new_student
+from src.generate_features import get_features, get_target
+from src.train_model import train_test_split, get_mean, get_sd,normalize_features
+from src.score_model import get_new_student, normalize_new_student
 from sklearn.linear_model import LogisticRegression
 
 logger = logging.getLogger(__name__)

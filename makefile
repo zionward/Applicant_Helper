@@ -23,8 +23,8 @@ models/new_student_prediction.csv: data/admission_to_train.csv src/score_model.p
 	python src/score_model.py --config=config.yaml --input=data/admission_to_train.csv --output=models/new_student_prediction.csv
 scores: models/new_student_prediction.csv
 
-models/admission_prediction.csv: data/admission-data--test-features.csv src/test_model.py
-	python src/test_model.py --config=config.yaml --input=data/admission-data--test-features.csv --output=models/admission_prediction.csv
+models/admission_prediction.csv: data/admission-data--test-features.csv src/score_test_model.py
+	python src/score_test_model.py --config=config.yaml --input=data/admission-data--test-features.csv --output=models/admission_prediction.csv
 Test: models/admission_prediction.csv
 
 models/model_evaluation.csv: models/admission_prediction.csv src/eval_model.py
@@ -34,6 +34,9 @@ evaluate_model: models/model_evaluation.csv
 models/optimal_score.csv: data/new_student.csv src/post_model.py
 	python src/post_model.py --config=config.yaml --option=GRE --input=data/new_student.csv --data=data/admission_to_train.csv --output=models/optimal_score.csv
 get_score: models/optimal_score.csv
+
+test:
+	pytest test/test.py
 
 
 

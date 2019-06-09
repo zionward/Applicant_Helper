@@ -5,7 +5,7 @@ import os
 #import config
 import pandas as pd
 import numpy as np
-from load_data import download_from_s3
+# from load_data import download_from_s3
 
 #logging.config.fileConfig(config.LOGGING_CONFIG)
 logger = logging.getLogger(__name__)
@@ -77,7 +77,7 @@ def get_target(df, target, save_path = None, **kwargs):
         target (str): A column name selected as target.
         save_path: Optional. Path to save the target column. Default is None.
     Returns:
-        y (:py:class:`pandas.DataFrame`): A pandas dataframe which is the target column.
+        y.value (:py:class:`pandas.DataFrame`): A pandas dataframe which is the target column.
     """
 
     y = df[target]
@@ -104,8 +104,6 @@ def generate_features(df, save_path=None, **kwargs):
     selected_columns_kwards = get_features(df, **kwargs["get_features"])
     df = get_features(df, selected_columns_kwards)
     df_reset = reset_y(df, **kwargs["reset_y"])
-    print("cur_df", df.head())
-
 
     if save_path is not None:
         df_reset.to_csv(save_path)
@@ -127,9 +125,6 @@ def run_generate_features(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    # if "load_data" in config:
-    #     #print(config["load_data"])
-    #     df = download_from_s3(args.bucket_name, args.file_key, args.output_file_path)
     if args.input is not None:
         df = pd.read_csv(args.input)   
     else:
@@ -146,12 +141,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "Generate features")
     parser.add_argument('--config', help = "Path to yaml file with config information")
     parser.add_argument('--input', help = "Path to input dataframe")
-    #parser.add_argument('--output', help = "Path to output dataframe")
-    # parser.add_argument("--bucket_name", help = "s3 bucket name")
-    # parser.add_argument("--file_key", help = "Name of the file in S3 that you want to download")
-    # parser.add_argument("--output_file_path", help = "output path for downloaded file")
     parser.add_argument("--output", help = "output path for output file") 
     args = parser.parse_args()
     
-
     run_generate_features(args)

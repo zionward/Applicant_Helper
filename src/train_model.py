@@ -12,7 +12,7 @@ import yaml
 import pickle
 import sklearn
 from sklearn.linear_model import LogisticRegression
-from generate_features import get_features, get_target
+from src.generate_features import get_features, get_target
 
 
 logger = logging.getLogger(__name__)
@@ -26,9 +26,7 @@ def get_mean(df,**kwargs):
     Returns:
     X.mean (:py:class:`pandas.DataFrame`): A one line pandas dataframe with mean of each feature.
     """ 
-    #logger.debug("normalize features...")
-    #selected_columns_kwards = get_features(df, **kwargs["get_features"])
-    #df = get_features(df, selected_columns_kwards)
+    logger.debug("Get Mean...")
     return df.mean()
 
 
@@ -40,9 +38,7 @@ def get_sd(df,**kwargs):
     Returns:
     X.std (:py:class:`pandas.DataFrame`): A one line pandas dataframe with mean of each feature.
     """
-    #logger.debug("normalize features...")
-    #selected_columns_kwards = get_features(df, **kwargs["get_features"])
-    #df = get_features(df, selected_columns_kwards)
+    logger.debug("Get Standard Deviation...")
     return df.std()
 
 def normalize_features(X, save_path = None, **kwargs):
@@ -123,7 +119,7 @@ def train_model(df, method = None, save_model = None, **kwargs):
     """Train a (logistic regression) model as specified.
     Args:
     df: (:py:class:`pandas.DataFrame` or :py:class:`numpy.Array`): A pandas dataframe
-    method (list): methods for training
+    method (list): methods for training, here is logistic regression
     ave_path (str): Optional. Path to save the trained logistic model. Default is None.
     
     Returns:

@@ -15,7 +15,7 @@ import math
 
 # Define LOGGING_CONFIG in config.py - path to config file for setting up the logger (e.g. config/logging/local.conf)
 logging.config.fileConfig(app.config["LOGGING_CONFIG"])
-logger = logging.getLogger("penny-lane")
+logger = logging.getLogger("appliant-helper")
 logger.debug('Test log')
 
 #Initialize flask
@@ -30,29 +30,27 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
-    """Main view that lists songs in the database.
+    """Homepage of this web-app.
 
-    Create view into index page that uses data queried from Track database and
-    inserts it into the msiapp/templates/index.html template.
+    Introduction to this web-app, and bottom to overview page and functional page
 
     Returns: rendered html template
 
     """
 
     try:
-        #tracks = Track.query.all()
         logger.debug("Index page accessed")
         return render_template('index.html')
     except:
-        logger.warning("Not able to display tracks, error page returned")
+        logger.warning("Not able to display homepage, error page returned")
         return render_template('error.html')
 
 
 @app.route('/add', methods=['POST','GET'])
 def add_entry():
-    """View that process a POST with new song input
+    """Main function of this App. User-interactive page. Get the input from users and make prediction base on that.
 
-    :return: redirect to index page
+    Return: redirect to optimal score prediction page (for rejected students) or congradulations page (for admitted students)
     """
     try:
         #retreve features
@@ -64,7 +62,7 @@ def add_entry():
         LOR = request.form['LOR']
         CGPA = request.form['CGPA']
         research = request.form['research']
-        logger.info('user inputs get')
+        logger.info('Get all user inputs')
 
         #load model
         path_to_data = app.config["DATA_PATH"]
@@ -83,23 +81,24 @@ def add_entry():
         
         with open(model_path, "rb") as f:
             logreg = pickle.load(f)
-        print("The coefs of the model are as following: ", logreg.coef_)
+        # logger.info("The coefs of the model are as following: ", logreg.coef_)
         new_stud = pd.DataFrame(columns=["GRE","TOEFL","University_rating", "SOP","LOR","CGPA","Research"])
         new_stud.loc[0] = [GRE,TOEFL,university_rating, SOP,LOR,CGPA,research]        
         new_stud = new_stud.apply(pd.to_numeric)
-        print("new_stud is ", new_stud)
         new_stud.to_csv("models/new_stud.csv", index = False)
         #predict result
         new_stud_nor= (new_stud - X_mean)/X_std
         y_new = logreg.predict(new_stud_nor)
-        # print("The predit result is", y_new)
         result = y_new[0]
 
         if result == 0:
+            #predict rejected
             return render_template('index_score.html', new_stud =new_stud, X_mean = X_mean, X_std = X_std, model = logreg)
         else:
+            #predict admitted
             return render_template('index_congrats.html', new_stud =new_stud, X_mean = X_mean, X_std = X_std, model = logreg)
-        #add track
+        
+        #add new student information to databse
         student = Student_Prediction(GRE=GRE, TOEFL=TOEFL, university_rating=university_rating,
                                        SOP = SOP, LOR = LOR, CGPA = CGPA, research = research)
         db.session.add(student)
@@ -117,9 +116,9 @@ def add_entry():
 @app.route('/bs', methods=['POST','GET'])
 def predict_entry():
 
-# #     """View that process a POST with new song input
+# #     """For rejected students, this user-interactive page get their choice of what subject they plan to take, and get
 
-# #     :return: redirect to index page
+# #     return: redirect to index_socre page with result for optimal score
 # #     """
     try:
         logger.info("Getting user input")

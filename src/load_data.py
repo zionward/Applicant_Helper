@@ -16,6 +16,10 @@ s3 = boto3.client("s3", config=botocore.client.Config(signature_version=botocore
 
 
 def download_from_s3(args):
+    """Down load dataset from public S3 buckent and save to local
+   
+    Return: None 
+    """
     s3.download_file(args.bucket_name, args.file_key, args.output_file_path)
     
 
