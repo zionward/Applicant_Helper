@@ -5,7 +5,7 @@ import os
 #import config
 import pandas as pd
 import numpy as np
-# from load_data import download_from_s3
+from load_data import download_from_s3
 
 #logging.config.fileConfig(config.LOGGING_CONFIG)
 logger = logging.getLogger(__name__)
@@ -122,14 +122,16 @@ def run_generate_features(args):
     Returns: 
         None
     """
+    print("args are: ", args)
 
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
+    # if "load_data" in config:
+    #     #print(config["load_data"])
+    #     df = download_from_s3(args.bucket_name, args.file_key, args.output_file_path)
     if args.input is not None:
-        df = pd.read_csv(args.input)
-    #elif "load_data" in config:
-        #df = download_from_s3(args)
+        df = pd.read_csv(args.input)   
     else:
         raise ValueError("No input data. Nor with path to dataframe nor config with load_data")
     
@@ -145,10 +147,11 @@ if __name__ == "__main__":
     parser.add_argument('--config', help = "Path to yaml file with config information")
     parser.add_argument('--input', help = "Path to input dataframe")
     #parser.add_argument('--output', help = "Path to output dataframe")
-    parser.add_argument("--bucket_name", help = "s3 bucket name")
-    parser.add_argument("--file_key", help = "Name of the file in S3 that you want to download")
-    parser.add_argument("--output_file_path", help = "output path for downloaded file")
+    # parser.add_argument("--bucket_name", help = "s3 bucket name")
+    # parser.add_argument("--file_key", help = "Name of the file in S3 that you want to download")
+    # parser.add_argument("--output_file_path", help = "output path for downloaded file")
     parser.add_argument("--output", help = "output path for output file") 
     args = parser.parse_args()
+    
 
     run_generate_features(args)

@@ -8,10 +8,12 @@ import pandas as pd
 import yaml
 import argparse
 import boto3
+import botocore
 
 logger = logging.getLogger(__name__)
 
-s3 = boto3.client("s3")
+s3 = boto3.client("s3", config=botocore.client.Config(signature_version=botocore.UNSIGNED))
+
 
 def download_from_s3(args):
     s3.download_file(args.bucket_name, args.file_key, args.output_file_path)
@@ -29,4 +31,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     #print(args.config, args.bucket_name)
 
-    run_loading(args)
+    download_from_s3(args)

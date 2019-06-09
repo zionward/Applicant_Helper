@@ -5,5 +5,5 @@ APP_NAME = "Graduate-Admission"
 SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "127.0.0.1"
-MODEL_PATH = "models/trained_model.pkl"
+MODEL_PATH = "models/logreg.pkl"
 DATA_PATH = "data/sample/admission_to_train.csv"

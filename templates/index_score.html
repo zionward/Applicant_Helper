@@ -30,6 +30,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="static/image/x-icon">
     <link rel="icon" href="favicon.ico" type="static/image/x-icon">
 
+    <style>
+    .display_result{
+            color: {{result}}; text-align: center; font-size: 30px;}
+    </style>
+
 </head>
 
 <body id="top">
@@ -74,15 +79,12 @@
     
                                     <a href="https://www.behance.net/" class="item-folio__project-link" title="Predict">
                                         Predict
-                                    </a>
-    
-    
+                                    </a>    
                                 </div> <!-- end item-folio -->
                             </div> <!-- end masonry__brick -->
     
                             <div class="masonry__brick" data-aos="fade-up">
                                 <div class="item-folio">
-    
                                     <div class="item-folio__thumb">
                                         <a href="static/images/portfolio/gallery/g-TOEFL.jpg" class="thumb-link" title="TOEFL" data-size="1050x700">
                                             <img src="static/images/portfolio/TOEFL.jpg"
@@ -116,12 +118,18 @@
                             </div>
                         </div>
                     </div> <!-- end masonry-wrap -->
+
+                    <div class="display_result">
+                        <p>{{high_score}}</p>
+                    </div>
+                    <!-- end masonry-wrap -->
+
                     <div class="form-submit">
                             <!-- <input type="submit" value="Reset All" class="submit" name="reset" id="reset" /> -->
                             <input type="submit" value="Submit" class="submit" name="submit" id="submit" style="background-color: #A5DF00" />
                     </div>
-                    <p>High Score</p>
-                    <p>{{high_score}}</p>
+                    <!-- <p>High Score</p>
+                    <p>{{high_score}}</p> -->
                 </form>
                 
             </form>

@@ -1,13 +1,14 @@
 from flask import render_template, request, redirect, url_for
 import logging.config
 from app import db, app
-from app.models import Track
+from src.database_model import Student_Prediction
 import traceback
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
 import pickle
-from src.generate_features import reset_y
+from src.load_data import download_from_s3
+# from src.generate_features import reset_y
 import sklearn
 from sklearn.linear_model import LogisticRegression
 import math
@@ -56,7 +57,6 @@ def add_entry():
     try:
         #retreve features
         logger.info("Getting user input")
-        conf = float(request.form['conf'])
         GRE = request.form['GRE']
         TOEFL = request.form['TOEFL']
         university_rating = request.form['University_Rating']
@@ -68,8 +68,8 @@ def add_entry():
 
         #load model
         path_to_data = app.config["DATA_PATH"]
+        model_path = app.config["MODEL_PATH"]
         data = pd.read_csv(path_to_data)
-        data = reset_y(df = data,cutoff = conf)
 
         X = data[["GRE","TOEFL","University_rating", "SOP","LOR","CGPA","Research"]]
         y = data["result"]
@@ -80,14 +80,10 @@ def add_entry():
         # X_std = pd.DataFrame([list(X_std.values)],columns=list(X_std.index))
         X_mean.to_csv("models/coef_mean.csv")
         X_std.to_csv("models/coef_std.csv")
-
-        logreg = LogisticRegression()
-        logreg.fit(X, y)
         
-        with open("models/logreg.pkl", "wb" ) as f: #write and binary
-            pickle.dump(logreg,f)
-        logger.info("Trained model save to %s", logreg)
-
+        with open(model_path, "rb") as f:
+            logreg = pickle.load(f)
+        print("The coefs of the model are as following: ", logreg.coef_)
         new_stud = pd.DataFrame(columns=["GRE","TOEFL","University_rating", "SOP","LOR","CGPA","Research"])
         new_stud.loc[0] = [GRE,TOEFL,university_rating, SOP,LOR,CGPA,research]        
         new_stud = new_stud.apply(pd.to_numeric)
@@ -104,10 +100,10 @@ def add_entry():
         else:
             return render_template('index_congrats.html', new_stud =new_stud, X_mean = X_mean, X_std = X_std, model = logreg)
         #add track
-        #student = students_prediction(GRE=GRE, TOEFL=TOEFL, university_rating=university_rating,
-        #                                SOP = SOP, LOR = LOR, CGPA = CGPA, research = research)
-        #db.session.add(student)
-        #db.session.commit()
+        student = Student_Prediction(GRE=GRE, TOEFL=TOEFL, university_rating=university_rating,
+                                       SOP = SOP, LOR = LOR, CGPA = CGPA, research = research)
+        db.session.add(student)
+        db.session.commit()
         #logger.info("New song added: %s by %s", request.form['title'], request.form['artist'])
         
 
@@ -120,16 +116,16 @@ def add_entry():
 
 @app.route('/bs', methods=['POST','GET'])
 def predict_entry():
-#     print(X_mean)
-#         print(X_mean)
+
 # #     """View that process a POST with new song input
 
 # #     :return: redirect to index page
 # #     """
     try:
         logger.info("Getting user input")
+        model_path = app.config["MODEL_PATH"]
         option = int(request.form['subject'])
-        with open("models/logreg.pkl", "rb") as f:
+        with open(model_path, "rb") as f:
             logreg = pickle.load(f)
         X_mean = pd.read_csv("models/coef_mean.csv", header = None)
         idx = X_mean.iloc[:,0]
@@ -141,8 +137,8 @@ def predict_entry():
         X_std.index = idx
         new_stud = pd.read_csv("models/new_stud.csv")
         input_GRE = new_stud.iloc[0]['GRE']
+        input_TOEFL = new_stud.iloc[0]['TOEFL']
         new_stud = (new_stud-X_mean)/X_std
-        # print("new_stud is ", new_stud)
         if option == 0:
             new_GRE = input_GRE
             new_stud2 =new_stud
@@ -150,8 +146,8 @@ def predict_entry():
             y_new = logreg.predict(new_stud2)
             #Base case: check if full grade in this project can be admit
             if y_new[0] == 0: 
-                high_score = "Cannot get admitted by improving only this subject. Fighting!"
-                return render_template('index_score.html', high_score = high_score)
+                high_score = "Cannot get admitted by improving only GRE. Fighting!"
+                return render_template('index_score.html', high_score = high_score, result = "red")
             low_pred = 0
             low_score = new_GRE
             high_pred = y_new[0]
@@ -161,8 +157,8 @@ def predict_entry():
                 mid_score = low_score + math.floor(diff/2)
                 new_stud2['GRE'] = (mid_score - X_mean['GRE'])/X_std['GRE']
                 y_new = logreg.predict(new_stud2)
-                print("mid_score is ", mid_score)
-                print("current predictive result is", y_new[0])
+               # print("mid_score is ", mid_score)
+               # print("current predictive result is", y_new[0])
                 if y_new[0]*high_pred < 1:#mid is not admitted, go to upper part
                     low_score = mid_score
                 else: #mid is admitted, go to lower part
@@ -170,16 +166,15 @@ def predict_entry():
                 diff = high_score - low_score
                 
         else:
-            new_TOEFL = new_stud.iloc[0]['TOEFL']
+            new_TOEFL = input_TOEFL
             new_stud2 =new_stud
             new_stud2["TOEFL"] = (120 - X_mean["TOEFL"])/X_std["TOEFL"]
             y_new = logreg.predict(new_stud2)
             #cur_score = stud_to_pred["TOEFL"][0]
             #Base case: check if full grade in this project can be admit
             if y_new[0] == 0: 
-                print("Cannot get admitted by improving only this subject. Fighting!")
-                return 120
-
+                high_score = "Cannot get admitted by improving only TOEFL. Fighting!"
+                return render_template('index_score.html', high_score = high_score, result = "red")
             low_pred = 0
             low_score = new_TOEFL
             high_pred = y_new[0]
@@ -194,8 +189,9 @@ def predict_entry():
                 else: #mid is admitted, go to lower part
                     high_score = mid_score
                 diff = high_score - low_score
-        return render_template('index_score.html', high_score = high_score)
 
+        high_score = "The minimum score that can help you to be admitted is " + str(high_score)
+        return render_template('index_score.html', high_score = high_score, result = "green")
     except:
         traceback.print_exc()
         logger.warning("Not able to display tracks, error page returned")

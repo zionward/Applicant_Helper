@@ -84,8 +84,8 @@
                 <form action="/add" method="POST">  -->
                     <!-- <dl> -->
             <!-- <li><a class="smoothscroll" href="#about">About<span>who we are</span></a></li> -->
+            <li><a  class="smoothscroll" href="#overview">Historical Distribution</a></li>
             <li><a class="smoothscroll" href="#services">Evaluate Yourself</a></li>
-            <li><a  class="smoothscroll" href="#contact">Set a higher target<span>get in touch</span></a></li>
                     <!-- <input type=submit value="Services"> -->
                     <!-- </dl>-->
             <!-- </form>
@@ -100,7 +100,154 @@
         <!-- end home-scroll -->
 
     </section> <!-- end s-home -->
+ 
+    
+<!-- Predict Score
+    ================================================== -->
+    <section id='overview' class="s-services light-gray">
+            <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+                <form action="/add" method="POST">
+                    <div class="row section-header" data-aos="fade-up">
+                        <div class="col-full">
+                            <h3 class="subhead">Overview</h3>
+                            <h1 class="display-1">Admitted vs Rejected Comparison</h1>
+                        </div>
+                    </div> <!-- end section-header -->
+    
+                    <div class="row" data-aos="fade-up">
+                        <div class="col-full">
+                            <p class="lead">
+                                Check historical distributions of different subjects of admitted vs rejected students
+                            </p>
+                        </div>
+                    </div> <!-- end about-desc -->
+    
+                    <div class="row masonry-wrap">
+                        <div class="masonry">    
+                            <div class="masonry__brick" data-aos="fade-up">
+                                <!-- <img src="static/images/portfolio/lamp.jpg" alt = ""> -->
+                                <div class="item-folio">
+    
+                                    <div class="item-folio__thumb">
+                                        <a href="static/images/portfolio/gallery/g-GPA_dist.jpg" class="thumb-link" title="GRE" data-size="1050x700">
+                                        <img src="static/images/portfolio/GPA_dist.jpg" 
+                                            srcset="static/images/portfolio/GPA_dist.jpg 1x, static/images/portfolio/GPA_dist@2x.jpg 2x" alt="">
+                                        </a>
+                                    </div>
+    
+                                    <div class="item-folio__text">
+                                        <h3 class="item-folio__title">
+                                            GPA
+                                        </h3>
+                                    </div>
+                                </div> <!-- end item-folio -->
+                            </div> <!-- end masonry__brick -->
+    
+                            <div class="masonry__brick" data-aos="fade-up">
+                                <div class="item-folio">
+    
+                                    <div class="item-folio__thumb">
+                                        <a href="static/images/portfolio/gallery/g-GRE_dist.jpg" class="thumb-link" title="GRE" data-size="1050x700">
+                                            <img src="static/images/portfolio/GRE_dist.jpg"
+                                                srcset="static/images/portfolio/GRE_dist.jpg 1x, static/images/portfolio/GRE_dist@2x.jpg 2x" alt="">
+                                        </a>
+                                    </div>
+    
+                                    <div class="item-folio__text">
+                                        <h3 class="item-folio__title">
+                                            GRE
+                                        </h3>
+                                    </div>
+                                </div> <!-- end item-folio -->
+                            </div> <!-- end masonry__brick -->
+
+                            <div class="masonry__brick" data-aos="fade-up">
+                                <div class="item-folio">
+                                        <div class="item-folio__thumb">
+                                            <a href="static/images/portfolio/gallery/g-TOEFL_dist.jpg" class="thumb-link" title="TOEFL_" data-size="1050x700">
+                                                <img src="static/images/portfolio/TOEFL_dist.jpg"
+                                                     srcset="static/images/portfolio/TOEFL_dist.jpg 1x, static/images/portfolio/TOEFL_dist@2x.jpg 2x" alt="">
+                                            </a>
+                                        </div>
+                
+                                        <div class="item-folio__text">
+                                            <h3 class="item-folio__title">
+                                                TOEFL
+                                            </h3>
+                                        </div>
+                                </div> <!-- end item-folio -->
+                            </div> <!-- end masonry__brick --> 
+
+                            <div class="masonry__brick" data-aos="fade-up">
+                                    <div class="item-folio">
+                
+                                        <div class="item-folio__thumb">
+                                            <a href="static/images/portfolio/gallery/g-univ_dist.jpg" class="thumb-link" title="univ_dist" data-size="1050x700">
+                                                <img src="static/images/portfolio/univ_dist.jpg"
+                                                     srcset="static/images/portfolio/univ_dist.jpg 1x, static/images/portfolio/univ_dist@2x.jpg 2x" alt="">
+                                            </a>
+                                        </div>
+                
+                                        <div class="item-folio__text">
+                                            <h3 class="item-folio__title">
+                                                University Distribution
+                                            </h3>
+                                        
+                                        </div>
+                
+
+                
+                                    </div> <!-- end item-folio -->
+                                </div> <!-- end masonry__brick -->
+                
+
+                                <div class="masonry__brick" data-aos="fade-up">
+                                        <div class="item-folio">
+                    
+                                            <div class="item-folio__thumb">
+                                                <a href="static/images/portfolio/gallery/g-research.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
+                                                    <img src="static/images/portfolio/research.jpg"
+                                                         srcset="static/images/portfolio/research.jpg 1x, static/images/portfolio/research@2x.jpg 2x" alt="">
+                                                </a>
+                                            </div>
+                    
+                                            <div class="item-folio__text">
+                                                <h3 class="item-folio__title">
+                                                    Research
+                                                </h3>
+                                            </div>
+                    
+                
+                    
+                                        </div> <!-- end item-folio -->
+                                    </div> <!-- end masonry__brick -->
+                    
+                                    <div class="masonry__brick" data-aos="fade-up">
+                                        <div class="item-folio">
+                    
+                                            <div class="item-folio__thumb">
+                                                <a href="static/images/portfolio/gallery/g-SOP.jpg" class="thumb-link" title="SOP" data-size="1050x700">
+                                                    <img src="static/images/portfolio/SOP.jpg"
+                                                         srcset="static/images/portfolio/SOP.jpg 1x, static/images/portfolio/sop@2x.jpg 2x" alt="">
+                                                </a>
+                                            </div>
+                    
+                                            <div class="item-folio__text">
+                                                <h3 class="item-folio__title">
+                                                    Statement of Purpose
+                                                </h3>
+                                            </div>
+                
+                    
+                                        </div> <!-- end item-folio -->
+                                    </div> <!-- end masonry__brick -->
+                    
+
+                        </div> <!-- end masonry -->
+    
         
+
+
     <!-- services
     ================================================== -->
 
@@ -258,94 +405,6 @@
         </form>
         </section> <!-- end s-services -->
 
-
-    <!-- Predict Score
-    ================================================== -->
-    <section id='contact' class="s-services light-gray">
-        <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
-            <form action="/add" method="POST">
-                <div class="row section-header" data-aos="fade-up">
-                    <div class="col-full">
-                        <h3 class="subhead">Set A Target</h3>
-                        <h1 class="display-1">Predict the minimum score to help you get an offer</h1>
-                    </div>
-                </div> <!-- end section-header -->
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-full">
-                        <p class="lead">
-                            Select your future exam, and see how much you need to get at least to help you get admitted. Then, work hard for this target!
-                        </p>
-                    </div>
-                </div> <!-- end about-desc -->
-
-                <div class="row masonry-wrap">
-                    <div class="masonry">
-
-                        <div class="masonry__brick" data-aos="fade-up">
-                            <!-- <img src="static/images/portfolio/lamp.jpg" alt = ""> -->
-                            <div class="item-folio">
-
-                                <div class="item-folio__thumb">
-                                    <a href="static/images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="GRE" data-size="1050x700">
-                                    <img src="static/images/portfolio/lamp.jpg" 
-                                        srcset="static/images/portfolio/lamp.jpg 1x, static/images/portfolio/lamp@2x.jpg 2x" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="item-folio__text">
-                                    <h3 class="item-folio__title">
-                                        GRE
-                                    </h3>
-                                </div>
-
-                                <a href="https://www.behance.net/" class="item-folio__project-link" title="Predict">
-                                    Predict
-                                </a>
-
-
-                            </div> <!-- end item-folio -->
-                        </div> <!-- end masonry__brick -->
-
-                        <div class="masonry__brick" data-aos="fade-up">
-                            <div class="item-folio">
-
-                                <div class="item-folio__thumb">
-                                    <a href="static/images/portfolio/gallery/g-TOEFL.jpg" class="thumb-link" title="TOEFL" data-size="1050x700">
-                                        <img src="static/images/portfolio/TOEFL.jpg"
-                                            srcset="static/images/portfolio/TOEFL.jpg 1x, static/images/portfolio/TOEFL@2x.jpg 2x" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="item-folio__text">
-                                    <h3 class="item-folio__title">
-                                        TOEFL
-                                    </h3>
-                                </div>
-
-                                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                    Predict
-                                </a>
-                            </div> <!-- end item-folio -->
-                        </div> <!-- end masonry__brick -->
-
-
-                    </div> <!-- end masonry -->
-                    <div class="service-text">
-                        <h3 class="h4">Select your subject</h3>
-                        <div class="form-select">
-                            <select name="subject" id="subject" style="background-color: #D8D8D8">
-                                <!-- <option value=""></option> -->
-                                <option value="0">GRE </option>
-                                <option value="1">TOEFL</option>
-                            </select>
-                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                        </div>
-                    </div>
-                </div> <!-- end masonry-wrap -->
-            </form>
-        </form>
-    </section> <!-- end s-services -->
 
     
 
