@@ -105,10 +105,8 @@ There might be different weights for different parts of the students' applicatio
 │   ├── develop                       <- Current notebooks being used in development.
 │   ├── deliver                       <- Notebooks shared with others. 
 │   ├── archive                       <- Develop notebooks no longer being used.
-│   ├── template.ipynb                <- Template notebook for analysis with useful imports and helper functions. 
 │
 ├── src                               <- Source data for the project 
-│   ├── archive/                      <- No longer current scripts.
 │   ├── helpers/                      <- Helper scripts used in main src files 
 │   ├── sql/                          <- SQL source code
 │   ├── add_songs.py                  <- Script for creating a (temporary) MySQL database and adding songs to it 
@@ -200,5 +198,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTg1MDQ2OTQsLTU0NDA5MDkxNl19
+eyJoaXN0b3J5IjpbMjI5NzA1ODIsLTU0NDA5MDkxNl19
 -->
