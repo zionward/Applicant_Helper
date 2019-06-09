@@ -2,7 +2,7 @@
 
 pennylane-env/bin/activate: requirements.txt
 	test -d pennylane-env || virtualenv pennylane-env
-	. pennylane-env/bin/activate; pip install -r requirement.txt
+	. pennylane-env/bin/activate; pip install -r requirements.txt
 	touch pennylane-env/bin/activate
 
 venv: pennylane-env/bin/activate
