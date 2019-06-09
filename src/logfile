@@ -1,0 +1,5 @@
+2019-06-09 16:30:34,588 INFO     RDS:False
+2019-06-09 16:30:34,622 INFO     database created
+2019-06-09 16:30:34,626 INFO     Data added
+2019-06-09 16:30:34,637 INFO        Serial  GRE TOEFL university_rating  SOP  LOR  CGPA research
+0       1  337   118                 4  4.5  4.5  9.65        1
