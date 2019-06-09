@@ -91,6 +91,13 @@ def add_entry():
         y_new = logreg.predict(new_stud_nor)
         result = y_new[0]
 
+        #add new student information to databse
+        student = Student_Prediction(GRE=GRE, TOEFL=TOEFL, university_rating=university_rating,
+                                       SOP = SOP, LOR = LOR, CGPA = CGPA, research = research)
+        db.session.add(student)
+        db.session.commit()
+        #logger.info("New song added: %s by %s", request.form['title'], request.form['artist'])
+
         if result == 0:
             #predict rejected
             return render_template('index_score.html', new_stud =new_stud, X_mean = X_mean, X_std = X_std, model = logreg)
@@ -98,12 +105,7 @@ def add_entry():
             #predict admitted
             return render_template('index_congrats.html', new_stud =new_stud, X_mean = X_mean, X_std = X_std, model = logreg)
         
-        #add new student information to databse
-        student = Student_Prediction(GRE=GRE, TOEFL=TOEFL, university_rating=university_rating,
-                                       SOP = SOP, LOR = LOR, CGPA = CGPA, research = research)
-        db.session.add(student)
-        db.session.commit()
-        #logger.info("New song added: %s by %s", request.form['title'], request.form['artist'])
+        
         
 
     except:
