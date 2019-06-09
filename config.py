@@ -3,7 +3,7 @@ DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
 PORT = 3000
 APP_NAME = "applicant-helper"
-# SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///src/user_prediction.db'
 SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
 
 conn_type = "mysql+pymysql"
@@ -15,6 +15,6 @@ DATABASE_NAME = 'msia423'
 SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.format(conn_type=conn_type, user=user, password=password, host=host, port=port, DATABASE_NAME=DATABASE_NAME)
 
 SQLALCHEMY_TRACK_MODIFICATIONS = True
-HOST = "0.0.0.0"
+HOST = "127.0.0.1"
 MODEL_PATH = "models/logreg.pkl"
 DATA_PATH = "data/admission_to_train.csv"
