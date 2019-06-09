@@ -95,16 +95,11 @@ There might be different weights for different parts of the students' applicatio
 │   ├── logging/                      <- Configuration files for python loggers
 │
 ├── data                              <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git. 
-│   ├── archive/                      <- Place to put archive data is no longer usabled. Not synced with git. 
-│   ├── external/                     <- External data sources, will be synced with git
 │   ├── sample/                       <- Sample data used for code development and testing, will be synced with git
 │
 ├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
 │
-├── figures                           <- Generated graphics and figures to be used in reporting.
-│
 ├── models                            <- Trained model objects (TMOs), model predictions, and/or model summaries
-│   ├── archive                       <- No longer current models. This directory is included in the .gitignore and is not tracked by git
 │
 ├── notebooks
 │   ├── develop                       <- Current notebooks being used in development.
@@ -205,5 +200,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUwMDk3Nzc5LC01NDQwOTA5MTZdfQ==
+eyJoaXN0b3J5IjpbLTE2OTg1MDQ2OTQsLTU0NDA5MDkxNl19
 -->
