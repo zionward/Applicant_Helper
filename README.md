@@ -114,10 +114,11 @@ There might be different weights for different parts of the students' applicatio
 │   ├── train_model.py                <- Script for training logistic regression for the admission result
 │   ├── score_test_model.py                <- Script for scoring testing predictions using a trained model.
 │   ├── eval_model.py             <- Script for evaluating model performance 
-│   ├── socre.py                <- Script for postprocessing predictions and model results
-│   ├── postpr.py                <- Script for postprocessing predictions and model results
+│   ├── socre_model.py                <- Script for predict one new student prediction result
+│   ├── post_model.py                <- Script for search optimal score of specified subject to help student be admitted
 │
 ├── test                              <- Files necessary for running model tests (see documentation below) 
+│   ├── test.py                <- unit test for code in '
 
 ├── run.py                            <- Simplifies the execution of one or more of the src scripts 
 ├── app.py                            <- Flask wrapper for running the model 
@@ -198,6 +199,6 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjQ5NTQzNSwyMjk3MDU4MiwtNTQ0MD
+eyJoaXN0b3J5IjpbMTk5NTI4Mzg0NCwyMjk3MDU4MiwtNTQ0MD
 kwOTE2XX0=
 -->
