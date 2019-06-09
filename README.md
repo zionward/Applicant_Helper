@@ -109,7 +109,7 @@ There might be different weights for different parts of the students' applicatio
 ├── src                               <- Source data for the project 
 │   ├── helpers/                      <- Helper scripts used in main src files 
 │   ├── sql/                          <- SQL source code
-│   ├── ；load_data.py                  <- Script download admission dataset from public S3 busket
+│   ├── load_data.py                  <- Script download admission dataset from public S3 busket
 │   ├── generate_features.py          <- Script for cleaning and transforming data and generating features used for use in training and scoring.
 │   ├── train_model.py                <- Script for training logistic regression for the admission result
 │   ├── score_test_model.py                <- Script for scoring testing predictions using a trained model.
@@ -200,5 +200,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNjA2NTA4N119
+eyJoaXN0b3J5IjpbLTk4Njk2MjQ0LDEzMjYwNjUwODddfQ==
 -->
