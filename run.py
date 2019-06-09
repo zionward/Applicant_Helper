@@ -26,6 +26,7 @@ logging.config.fileConfig(app.config["LOGGING_CONFIG"])
 logger = logging.getLogger("applicant-helper")
 logger.debug('Test Log')
 
+
 from src.generate_features import run_generate_features
 from src.train_model import run_train_model
 from src.score_test_model import run_test_model
@@ -39,6 +40,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run components of the model source code")
     subparsers = parser.add_subparsers()
 
+
+    
     # Generate Features
     sb_features = subparsers.add_parser("generate_features", description = "Generate features")
     sb_features.add_argument('--config', help = "Path to yaml file with config information")

@@ -92,4 +92,28 @@ def test_model_type():
     expected_type = "<class 'sklearn.linear_model.logistic.LogisticRegression'>"
     assert str(type(fit_bin)) == expected_type
 
+def test_score_model():
+    """test the function of score_model whether it gives correct prediction only 1 and 0"""
+    
+    df = pd.read_csv('data/bank_processed.csv')
+    path_to_tmo = 'models/.pkl'
+    cutoff = 0.5
+    
+    kwargs = {"choose_features": {'features_to_use': 
+                                  ['age', 'job', 'marital', 'education', 
+                                   'default', 'balance', 'housing','loan', 
+                                   'contact', 'day', 'month', 'campaign', 
+                                   'pdays', 'previous','poutcome']}}
+    actual = sm.score_model(df, path_to_tmo, cutoff, save_scores=None, **kwargs)
+    
+    n1 = (sum(actual.pred_prob.between(0,1,inclusive=True)))
+    n2 = (actual.shape[0])
+    try:
+        # check type
+        assert isinstance(actual, pd.DataFrame)
+        # check whether all data probability range is [0,1]
+        assert n1==n2
+        print('Test for split_data function PASSED!')
+    except:
+        print('Test for split_data function FAILED!')
 

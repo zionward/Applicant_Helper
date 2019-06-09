@@ -3,3 +3,6 @@ __pycache__
 
 # mac file
 .DS_Store
+
+#pennylane
+pennylane

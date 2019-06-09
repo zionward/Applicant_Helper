@@ -2,7 +2,7 @@ import os
 DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
 PORT = 3000
-APP_NAME = "Applicant-Helper"
+APP_NAME = "applicant-helper"
 # SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'
 SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
 

@@ -137,11 +137,11 @@ def run_generate_features(args):
         
     return df
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description = "Generate features")
-    parser.add_argument('--config', help = "Path to yaml file with config information")
-    parser.add_argument('--input', help = "Path to input dataframe")
-    parser.add_argument("--output", help = "output path for output file") 
-    args = parser.parse_args()
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description = "Generate features")
+#     parser.add_argument('--config', help = "Path to yaml file with config information")
+#     parser.add_argument('--input', help = "Path to input dataframe")
+#     parser.add_argument("--output", help = "output path for output file") 
+#     args = parser.parse_args()
     
-    run_generate_features(args)
+#     run_generate_features(args)

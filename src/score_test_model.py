@@ -66,14 +66,14 @@ def run_test_model(args):
         y_pred_df.columns = ['result']
         y_pred_df.to_csv(args.output, index = False)
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Score model")
-    parser.add_argument('--config', '-c', help='path to yaml file with configurations')
-    parser.add_argument('--input', '-i', default=None, help="Path to input dataframe")
-    parser.add_argument('--output', '-o', default=None, help='Path to output file')
-    args = parser.parse_args()
+# if __name__ == '__main__':
+#     parser = argparse.ArgumentParser(description="Score model")
+#     parser.add_argument('--config', '-c', help='path to yaml file with configurations')
+#     parser.add_argument('--input', '-i', default=None, help="Path to input dataframe")
+#     parser.add_argument('--output', '-o', default=None, help='Path to output file')
+#     args = parser.parse_args()
 
-    run_test_model(args)
+#     run_test_model(args)
 
 
 

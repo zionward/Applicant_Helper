@@ -188,15 +188,15 @@ def run_train_model(args):
 
         
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Train model")
-    parser.add_argument('--config', default="config.yaml",
-                        help='path to yaml file with configurations')
-    parser.add_argument('--input', default=None, help="Path to input dataframe")
-    parser.add_argument('--output', default=None, help='Path to output dataframe')
+# if __name__ == '__main__':
+#     parser = argparse.ArgumentParser(description="Train model")
+#     parser.add_argument('--config', default="config.yaml",
+#                         help='path to yaml file with configurations')
+#     parser.add_argument('--input', default=None, help="Path to input dataframe")
+#     parser.add_argument('--output', default=None, help='Path to output dataframe')
 
-    args = parser.parse_args()
+#     args = parser.parse_args()
 
-    run_train_model(args)
+#     run_train_model(args)
 
     
