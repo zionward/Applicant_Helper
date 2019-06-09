@@ -55,4 +55,4 @@ clean-pyc:
 
 clean: clean-tests clean-pyc
 
-all: venv load_data features train_model Test evaluate_model
+all: load_data features train_model Test evaluate_model

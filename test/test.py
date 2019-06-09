@@ -11,6 +11,7 @@ from sklearn.exceptions import NotFittedError
 
 from src.generate_features import get_features, get_target
 from src.train_model import get_mean, get_sd, train_test_split,train_model
+# from src.score_test_model import test_model
 
 
 def test_load_data():
