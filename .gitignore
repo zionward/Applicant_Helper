@@ -1,2 +1,5 @@
+# pycache file
+__pycache__
+
+# mac file
 .DS_Store
-.pyc
