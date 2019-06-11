@@ -273,7 +273,7 @@ that means the train-model part has been done. You can run `python app.py` direc
 ```bash
 make clean
 ```
-if you are a windows user, go to http://gnuwin32.sourceforge.net/packages/make.htm and download `Binaries`. Add the path of `bin\make.exe` to path variable in environment variables.
+if you are a windows user, go to http://gnuwin32.sourceforge.net/packages/make.htm and download `Binaries`. Add the path of `bin\make.exe` to to the value of environment variable `Path`
 
 
 
@@ -287,5 +287,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2NDczNDg5XX0=
+eyJoaXN0b3J5IjpbNzc3Nzg3ODQ3XX0=
 -->
