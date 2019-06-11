@@ -170,7 +170,7 @@ pip install -r requirements.txt
 ```bash
 pip install virtualenv 
 virtualenv pennylane 
-pennylane/bin/activate.bat
+pennylane/Scripts/activate.bat
 pip install -r requirements.txt
 ```
 
@@ -287,5 +287,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc3Nzg3ODQ3XX0=
+eyJoaXN0b3J5IjpbMTc3NTAyMzc1MF19
 -->
