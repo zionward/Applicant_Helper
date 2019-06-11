@@ -95,7 +95,6 @@ There might be different weights for different parts of the students' applicatio
 │   ├── logging/                      <- Configuration files for python loggers
 │
 ├── data                              <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git. 
-│   ├── sample/                       <- Sample data used for code development and testing, will be synced with git
 │
 ├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
 │
@@ -114,7 +113,7 @@ There might be different weights for different parts of the students' applicatio
 │   ├── train_model.py                <- Script for training logistic regression for the admission result
 │   ├── score_test_model.py                <- Script for scoring testing predictions using a trained model.
 │   ├── eval_model.py             <- Script for evaluating model performance 
-│   ├── socre_model.py                <- Script for predict one new student prediction result
+│   ├── socre_model.py                <- Script for predict one new student prediction result (like what )
 │   ├── post_model.py                <- Script for search optimal score of specified subject to help student be admitted
 │   ├── database_model.py                <- Script for creating database model that is later connect to the Flask APP
 │
@@ -133,10 +132,15 @@ This project structure was partially influenced by the [Cookiecutter Data Scienc
 * Open up `docs/build/html/index.html` to see Sphinx documentation docs. 
 * See `docs/README.md` for keeping docs up to date with additions to the repository.
 
+## Instructions on getting data and database ready
+* See `src/README.md` for guideline of setting dataset
+
 ## Running the application 
 ### 1. Set up environment 
 
-The `requirements.txt` file contains the packages required to run the model code. An environment can be set up in two ways. See bottom of README for exploratory data analysis environment setup. 
+The `requirements.txt` file contains the packages required to run the model code. An environment can be set up in two ways. 
+
+First, `cd path_to_repo`
 
 #### With `virtualenv`
 
@@ -156,7 +160,6 @@ pip install -r requirements.txt
 conda create -n pennylane python=3.7
 conda activate pennylane
 pip install -r requirements.txt
-
 ```
 
 ### 2. Configure Flask app 
@@ -165,40 +168,87 @@ pip install -r requirements.txt
 
 ```python
 DEBUG = True  # Keep True for debugging, change to False when moving to production 
-LOGGING_CONFIG = "config/logging/local.conf"  # Path to file that configures Python logger
-PORT = 3002  # What port to expose app on 
-SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'  # URI for database that contains tracks
-
+LOGGING_CONFIG =  "config/logging/local.conf"  # Path to file that configures Python logger
+PORT = 3000  # What port to expose app on 
+SQLALCHEMY_DATABASE_URI = 'sqlite:///src/user_prediction.db'# URI for database that contains tracks
 ```
-
 
 ### 3. Initialize the database 
 
-To create the database in the location configured in `config.py` with one initial song, run: 
+To create the database in the location configured in `config.py` with one initial student, run: 
 
-`python run.py create --artist=<ARTIST> --title=<TITLE> --album=<ALBUM>`
+`python src/database_model.py`
 
-To add additional songs:
 
-`python run.py ingest --artist=<ARTIST> --title=<TITLE> --album=<ALBUM>`
+To create the database on RDS in the location configured in `config.py` with one initial bank customer, first change path to where the file is located and run:
+
+`python src/database_model.py --RDS True`
+
+To add additional student information, run the web-app and  enter the student info will be recorded.
 
 
 ### 4. Run the application 
- 
+
+#### Local
+To run this app locally,  run following line to train model:
+```bash
+make all
+```
+After checking the evaluation (AUC and Confusion Matrix) in models file, if you feel this model looks good, then run the web-app using:
  ```bash
  python app.py 
  ```
+### RDS
+To run the application on RDS, unncomment following lines in `config.py`.
+```bash
+ SQLALCHEMY_DATABASE_URI =  'sqlite:///src/user_prediction.db'
+ ```
+ and add 
+ ``` bash
+ SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
+conn_type = "mysql+pymysql"
+user = os.environ.get("MYSQL_USER")
+password = os.environ.get("MYSQL_PASSWORD")
+host = os.environ.get("MYSQL_HOST")
+port = os.environ.get("MYSQL_PORT")
+DATABASE_NAME = 'msia423'
+SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.format(conn_type=conn_type, user=user, password=password, host=host, port=port, DATABASE_NAME=DATABASE_NAME)
+ ```
+ Also, change the current `HOST` from:
+ ```bash
+HOST =  "127.0.0.1"
+```
+to
+```bash
+HOST = "0.0.0.0"
+```
+Then run the model:
+```bash
+make all
+```
+then run the application:
+```bash
+python app.py
+```
+
+💡 Tips: If you meet the following error:
+```bash
+AttributeError: 'NoneType' object has no attribute 'format'
+```
+Please run following command in terminal before run `make all`:
+```bash
+export SQLALCHEMY_DATABASE_URI="{conn_type}://{user}:{password}@{host}:{port}/{DATABASE_NAME}"
+```
 
 ### 5. Interact with the application 
 
-Go to [http://127.0.0.1:3000/]( http://127.0.0.1:3000/) to interact with the current version of hte app. 
+Go to [http://127.0.0.1:3000/]( http://127.0.0.1:3000/) to interact with the current version of this web-app. 
 
 ## Testing 
 
-Run `pytest` from the command line in the main project repository. 
+Run `make test` from the command line in the main project repository. 
 
-
-Tests exist in `test/test_helpers.py`
+Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4Njk2MjQ0LDEzMjYwNjUwODddfQ==
+eyJoaXN0b3J5IjpbMjExNDczMzgyMV19
 -->

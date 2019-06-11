@@ -17,7 +17,7 @@ from sklearn.linear_model import LogisticRegression
 logger = logging.getLogger(__name__)
 score_model_kwargs = ["predict"]
 
-def test_model(X_test, model_path, save_score, **kwargs):
+def score_test_model(X_test, model_path, save_score, **kwargs):
     """ Calculate the socre for the predictive model.
     Args:
         X_test: (:py:class:`pandas.DataFrame`): a pandas dataframe containing testing dataset
@@ -33,8 +33,9 @@ def test_model(X_test, model_path, save_score, **kwargs):
     
     #predict
     y_pred = logreg.predict(X_test)
+    y_pred_df = pd.DataFrame(y_pred)
     if save_score is not None:
-        y_pred_df = pd.DataFrame(y_pred)
+        # y_pred_df = pd.DataFrame(y_pred)
         y_pred_df.columns = ['result']
         y_pred_df.to_csv(save_score, index = False)
 
@@ -59,7 +60,7 @@ def run_test_model(args):
     else:
         raise ValueError("No input data.")
 
-    y_predicted = test_model(X_test, **config["test_model"]) 
+    y_predicted = score_test_model(X_test, **config["test_model"]) 
 
     if args.output is not None: 
         y_pred_df = pd.DataFrame(y_predicted)

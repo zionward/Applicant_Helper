@@ -11,8 +11,8 @@ from sklearn.exceptions import NotFittedError
 
 from src.generate_features import get_features, get_target
 from src.train_model import get_mean, get_sd, train_test_split,train_model
-# from src.score_test_model import test_model
-
+from src.score_test_model import score_test_model
+from src.eval_model import evaluate_model
 
 def test_load_data():
     """Test if the loaded data is expected"""
@@ -93,27 +93,16 @@ def test_model_type():
     assert str(type(fit_bin)) == expected_type
 
 def test_score_model():
-    """test the function of score_model whether it gives correct prediction only 1 and 0"""
+    """test the function of score_test_model whether it gives correct prediction only 1 and 0"""
     
-    df = pd.read_csv('data/bank_processed.csv')
-    path_to_tmo = 'models/.pkl'
-    cutoff = 0.5
-    
-    kwargs = {"choose_features": {'features_to_use': 
-                                  ['age', 'job', 'marital', 'education', 
-                                   'default', 'balance', 'housing','loan', 
-                                   'contact', 'day', 'month', 'campaign', 
-                                   'pdays', 'previous','poutcome']}}
-    actual = sm.score_model(df, path_to_tmo, cutoff, save_scores=None, **kwargs)
-    
-    n1 = (sum(actual.pred_prob.between(0,1,inclusive=True)))
-    n2 = (actual.shape[0])
-    try:
-        # check type
-        assert isinstance(actual, pd.DataFrame)
-        # check whether all data probability range is [0,1]
-        assert n1==n2
-        print('Test for split_data function PASSED!')
-    except:
-        print('Test for split_data function FAILED!')
-
+    df = pd.read_csv('test/test_data10.csv')
+    X = df[['GRE', 'TOEFL', 'University_rating', 'SOP', 'LOR', 'CGPA', 'Research']]
+    model_path = 'test/logreg.pkl'
+   
+    results = score_test_model(X_test = X, model_path = model_path,save_score=None)
+    flag = 0
+    for i in results:
+        print("current i", i)
+        if i != 0 and i != 1:
+            flag = 1
+    assert flag == 0
