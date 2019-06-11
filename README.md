@@ -240,6 +240,16 @@ Please run following command in terminal before run `make all`:
 export SQLALCHEMY_DATABASE_URI="{conn_type}://{user}:{password}@{host}:{port}/{DATABASE_NAME}"
 ```
 
+💡If your get info when you run `make all`:
+```bash
+make: Nothing to be done for `all'.
+```
+that means the train-model part has been done. You can run `python app.py` directly. If you want to train-model again, please run the following command before you run `make all`:
+```bash
+make clean
+```
+
+
 ### 5. Interact with the application 
 
 Go to [http://127.0.0.1:3000/]( http://127.0.0.1:3000/) to interact with the current version of this web-app. 
@@ -250,5 +260,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNDczMzgyMV19
+eyJoaXN0b3J5IjpbMTQ1ODQ2MzY4M119
 -->
