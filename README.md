@@ -163,6 +163,15 @@ pip install -r requirements.txt
 conda create -n pennylane python=3.6
 conda activate pennylane
 pip install -r requirements.txt
+
+```
+
+#### Windows User (strongly not recommended)
+```bash
+pip install virtualenv 
+virtualenv pennylane 
+pennylane/bin/activate.bat
+pip install -r requirements.txt
 ```
 
 ### 2. Configure Flask app 
@@ -197,7 +206,7 @@ To create the database on RDS in the location configured in `config.py` with one
 
 ```bash
 cd src
-python database_model.py --RDS True`
+python database_model.py --RDS True
 ```
 To add additional student information, run the web-app and  enter the student info will be recorded.
 
@@ -206,14 +215,14 @@ To add additional student information, run the web-app and  enter the student in
 
 #### Local
 
-1. (Optional) If you want to train this model, do this step. If not, go to step 2 directly. To run this app locally,  run following line to train model. If meet `make: Nothing to be done for all.` problem, see tip 2 below:
-```bash
-make all
-```
-2. After checking the evaluation (AUC and Confusion Matrix) in models file, if you feel this model looks good, then run the web-app using:
+1. After checking the evaluation (AUC and Confusion Matrix) in models file, if you feel this model looks good, then run the web-app using:
  ```bash
  python app.py 
  ```
+2. (Optional) If you want to train this model, do this step. To run this app locally,  run following line to train model. If meet `make: Nothing to be done for all.` problem, see tip 2 for details:
+```bash
+make all
+```
 ### RDS
 To run the application on RDS, unncomment following lines in `config.py`.
 ```bash
@@ -264,6 +273,8 @@ that means the train-model part has been done. You can run `python app.py` direc
 ```bash
 make clean
 ```
+if you are a windows user, go to http://gnuwin32.sourceforge.net/packages/make.htm and download `Binaries`. Add the path of `bin\make.exe` to path variable in environment variables.
+
 
 
 ### 5. Interact with the application 
@@ -276,5 +287,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE1MDkxNzFdfQ==
+eyJoaXN0b3J5IjpbODQ2NDczNDg5XX0=
 -->
