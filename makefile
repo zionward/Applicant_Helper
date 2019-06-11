@@ -21,7 +21,7 @@ train_model: models/logreg.pkl
 
 models/admission_prediction.csv: data/admission-data--test-features.csv src/score_test_model.py
 	python run.py score_test_model --config=config/config.yaml --input=data/admission-data--test-features.csv --output=models/admission_prediction.csv
-Test: models/admission_prediction.csv
+score: models/admission_prediction.csv
 
 models/model_evaluation.csv: models/admission_prediction.csv src/eval_model.py
 	python run.py run_evaluate_model --config=config/config.yaml --Xtest=data/admission-data--test-features.csv --input=models/admission_prediction.csv --output=models/model_evaluation.csv
@@ -48,4 +48,4 @@ clean-pyc:
 
 clean: clean-tests clean-pyc
 
-all: load_data features train_model Test evaluate_model
+all: load_data features train_model score evaluate_model

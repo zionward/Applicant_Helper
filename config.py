@@ -3,7 +3,7 @@ DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
 PORT = 3000
 APP_NAME = "applicant-helper"
-SQLALCHEMY_DATABASE_URI = 'sqlite:///src/user_prediction.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///src/students_prediction.db'
 # SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
 
 # conn_type = "mysql+pymysql"
