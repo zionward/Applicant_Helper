@@ -22,7 +22,6 @@ from sklearn.metrics import roc_curve
 from sklearn.linear_model import LogisticRegression
 
 import matplotlib.pyplot as plt
-# from load_data import load_data
 from src.generate_features import get_features, get_target
 from src.train_model import train_test_split
 
@@ -119,16 +118,5 @@ def run_evaluate_model(args):
         
     metric = evaluate_model(df,X_test, **config["evaluate_model"])
 
-
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description="Evaluate Model")
-#     parser.add_argument('--config', '-c', help='path to yaml file with configurations')
-#     parser.add_argument('--Xtest', '-x', default=None, help="Path to CSV for features to model evaluation")
-#     parser.add_argument('--input', '-i', default=None, help="Path to CSV for input to model evaluation")
-#     parser.add_argument('--output', '-o', default=None, help='Path to save the output file.')
-
-#     args = parser.parse_args()
-
-#     run_evaluate_model(args)
 
     

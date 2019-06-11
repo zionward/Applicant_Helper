@@ -128,14 +128,14 @@ def run_post_model(args):
     if args.output is not None:
         pd.DataFrame(np.array([new_score])).to_csv(args.output,index = False)
 
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description="Evaluate Model")
-#     parser.add_argument('--config', '-c', help='path to yaml file with configurations')
-#     parser.add_argument('--input', '-i', default=None, help="Path to CSV for input to model evaluation")
-#     parser.add_argument('--option','-op', default='GRE', help = "Choose a subject to predict.")
-#     parser.add_argument('--data', '-d', help = 'path to raw student dataset.')
-#     parser.add_argument('--output', '-o', default=None, help='Path to save the output file.')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Evaluate Model")
+    parser.add_argument('--config', '-c', help='path to yaml file with configurations')
+    parser.add_argument('--input', '-i', default=None, help="Path to CSV for input to model evaluation")
+    parser.add_argument('--option','-op', default='GRE', help = "Choose a subject to predict.")
+    parser.add_argument('--data', '-d', help = 'path to raw student dataset.')
+    parser.add_argument('--output', '-o', default=None, help='Path to save the output file.')
 
-#     args = parser.parse_args()
+    args = parser.parse_args()
 
-#     run_post_model(args)
+    run_post_model(args)

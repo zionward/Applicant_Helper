@@ -9,7 +9,6 @@ import sklearn
 import pandas as pd
 import numpy as np
 
-# from load_data import load_data
 from src.generate_features import get_features, get_target
 from src.train_model import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -35,7 +34,6 @@ def score_test_model(X_test, model_path, save_score, **kwargs):
     y_pred = logreg.predict(X_test)
     y_pred_df = pd.DataFrame(y_pred)
     if save_score is not None:
-        # y_pred_df = pd.DataFrame(y_pred)
         y_pred_df.columns = ['result']
         y_pred_df.to_csv(save_score, index = False)
 
@@ -66,15 +64,6 @@ def run_test_model(args):
         y_pred_df = pd.DataFrame(y_predicted)
         y_pred_df.columns = ['result']
         y_pred_df.to_csv(args.output, index = False)
-
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description="Score model")
-#     parser.add_argument('--config', '-c', help='path to yaml file with configurations')
-#     parser.add_argument('--input', '-i', default=None, help="Path to input dataframe")
-#     parser.add_argument('--output', '-o', default=None, help='Path to output file')
-#     args = parser.parse_args()
-
-#     run_test_model(args)
 
 
 

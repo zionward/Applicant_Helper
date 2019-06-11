@@ -53,8 +53,6 @@ def normalize_features(X, save_path = None, **kwargs):
     """
 
     logger.debug("normalize features...")
-    #selected_columns_kwards = get_features(df, **kwargs["get_features"])
-    #X = get_features(df, selected_columns_kwards)
 
     mean_X = get_mean(X)
     std_X = get_sd(X)
@@ -186,17 +184,5 @@ def run_train_model(args):
             pickle.dump(model,f)
         logger.info("Trained model save to %s" % args.output)
 
-        
-
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description="Train model")
-#     parser.add_argument('--config', default="config.yaml",
-#                         help='path to yaml file with configurations')
-#     parser.add_argument('--input', default=None, help="Path to input dataframe")
-#     parser.add_argument('--output', default=None, help='Path to output dataframe')
-
-#     args = parser.parse_args()
-
-#     run_train_model(args)
 
     

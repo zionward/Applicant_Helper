@@ -106,3 +106,24 @@ def test_score_model():
         if i != 0 and i != 1:
             flag = 1
     assert flag == 0
+
+# def test_eval_model():
+#     """test if the output was valid number (AUC and Accuracy are all between 0-1)"""
+#     result = pd.read_csv("models/model_evaluation.csv")
+#     flag = 0
+
+#     if 'auc' not in result.columns:
+#         flag = 1
+
+#     if 'accuracy' not in result.columns:
+#         flag = 1
+
+#     print("auc is: ", result['auc'])
+#     if result['auc']<0 or result['auc'] > 1:
+#         flag = 1
+
+#     if result['accuracy'] < 0  or result['accuracy'] > 1:
+#         flag = 1
+
+#     assert flag == 0 
+

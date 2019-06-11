@@ -9,7 +9,6 @@ import sklearn
 import pandas as pd
 import numpy as np
 
-#from load_data import load_data
 from src.generate_features import get_features, get_target
 from src.train_model import train_test_split, get_mean, get_sd,normalize_features
 from sklearn.linear_model import LogisticRegression
@@ -27,7 +26,6 @@ def get_new_student(new_student_df, new_CGPA, new_GRE, new_LOR, new_Research, ne
     new_student_df.SOP = new_SOP
     new_student_df.TOEFL = new_TOEFL
     new_student_df.University_rating = new_University_rating
-    #new_student_df = (new_student_df - X_mean)/X_std
     new_student_df.to_csv(save_new_student)
     return new_student_df
 

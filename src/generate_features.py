@@ -2,12 +2,9 @@ import logging
 import argparse
 import yaml
 import os
-#import config
 import pandas as pd
 import numpy as np
-# from load_data import download_from_s3
 
-#logging.config.fileConfig(config.LOGGING_CONFIG)
 logger = logging.getLogger(__name__)
 
 
@@ -79,7 +76,7 @@ def get_target(df, target, save_path = None, **kwargs):
     Returns:
         y.value (:py:class:`pandas.DataFrame`): A pandas dataframe which is the target column.
     """
-
+    #get target
     y = df[target]
 
     if save_path is not None:
@@ -120,7 +117,6 @@ def run_generate_features(args):
     Returns: 
         None
     """
-    print("args are: ", args)
 
     with open(args.config, "r") as f:
         config = yaml.load(f)
@@ -136,12 +132,3 @@ def run_generate_features(args):
         df.to_csv(args.output)
         
     return df
-
-# if __name__ == "__main__":
-#     parser = argparse.ArgumentParser(description = "Generate features")
-#     parser.add_argument('--config', help = "Path to yaml file with config information")
-#     parser.add_argument('--input', help = "Path to input dataframe")
-#     parser.add_argument("--output", help = "output path for output file") 
-#     args = parser.parse_args()
-    
-#     run_generate_features(args)
