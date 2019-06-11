@@ -154,10 +154,10 @@ source pennylane/bin/activate
 pip install -r requirements.txt
 
 ```
-#### With `conda`
+#### With `conda` （recommend）
 
 ```bash
-conda create -n pennylane python=3.7
+conda create -n pennylane python=3.6
 conda activate pennylane
 pip install -r requirements.txt
 ```
@@ -267,5 +267,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTM4NTEwXX0=
+eyJoaXN0b3J5IjpbMzY2OTgyOTZdfQ==
 -->
