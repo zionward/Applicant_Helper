@@ -116,6 +116,9 @@ There might be different weights for different parts of the students' applicatio
 │   ├── socre_model.py                <- Script for predict one new student prediction result (like what )
 │   ├── post_model.py                <- Script for search optimal score of specified subject to help student be admitted
 │   ├── database_model.py                <- Script for creating database model that is later connect to the Flask APP
+│   ├── uploadToS3                <- Script for updating dataset to specified S3 bucket
+│   ├── score_model.py                <- Script for predict a student application result (like what we do in the web-app)
+│   ├── post_model.py                <- Script for predict an optimal score for "rejected" student (like what we do in the web-app)
 │
 ├── test                              <- Files necessary for running model tests (see documentation below) 
 │   ├── test.py                <- unit test for code in /src
@@ -267,5 +270,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY2OTgyOTZdfQ==
+eyJoaXN0b3J5IjpbMTk3Njk4NTAyMl19
 -->
