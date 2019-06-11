@@ -175,10 +175,17 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///src/user_prediction.db'# URI for database t
 
 ### 3. Initialize the database 
 
+#### Locally
+
 To create the database in the location configured in `config.py` with one initial student, run: 
 
 `python src/database_model.py`
 
+The database `students_prediction.db` will be created in current directory.
+
+To add additional student information, run the web-app and  enter the student info will be recorded.
+
+#### RDS
 
 To create the database on RDS in the location configured in `config.py` with one initial bank customer, first change path to where the file is located and run:
 
@@ -260,5 +267,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODQ2MzY4M119
+eyJoaXN0b3J5IjpbMjA5NTM4NTEwXX0=
 -->
