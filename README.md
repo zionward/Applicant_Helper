@@ -205,11 +205,12 @@ To add additional student information, run the web-app and  enter the student in
 ### 4. Run the application 
 
 #### Local
-To run this app locally,  run following line to train model:
+
+1. (Optional) If you want to train this model, do this step. If not, go to step 2 directly. To run this app locally,  run following line to train model. If meet `make: Nothing to be done for all.` problem, see tip 2 below:
 ```bash
 make all
 ```
-After checking the evaluation (AUC and Confusion Matrix) in models file, if you feel this model looks good, then run the web-app using:
+2. After checking the evaluation (AUC and Confusion Matrix) in models file, if you feel this model looks good, then run the web-app using:
  ```bash
  python app.py 
  ```
@@ -275,5 +276,5 @@ Run `make test` from the command line in the main project repository.
 
 Tests exist in `test/test.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDUyNDM0XX0=
+eyJoaXN0b3J5IjpbLTE4MzE1MDkxNzFdfQ==
 -->
