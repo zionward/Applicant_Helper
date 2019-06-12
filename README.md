@@ -293,5 +293,5 @@ The HTML template is referred from Transcend https://colorlib.com/wp/template/tr
 
 The dataset was from Kaggle https://www.kaggle.com/mohansacharya/graduate-admissions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDc1NzM5MzksMTc3NTAyMzc1MF19
+eyJoaXN0b3J5IjpbLTE5NDc1NzM5MzldfQ==
 -->
