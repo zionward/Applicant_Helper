@@ -286,6 +286,12 @@ Go to [http://127.0.0.1:3000/]( http://127.0.0.1:3000/) to interact with the cur
 Run `make test` from the command line in the main project repository. 
 
 Tests exist in `test/test.py`
+
+
+## Citation
+The HTML template is referred from Transcend https://colorlib.com/wp/template/transcend/
+
+The dataset was from Kaggle https://www.kaggle.com/mohansacharya/graduate-admissions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTAyMzc1MF19
+eyJoaXN0b3J5IjpbLTE5NDc1NzM5MzksMTc3NTAyMzc1MF19
 -->
